@@ -1,0 +1,722 @@
+{
+  "users": [
+    {
+      "email": "nandini.aggarwal@1mg.com",
+      "name": "Nandini Aggarwal",
+      "role": "payroll_admin",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "sankar.yadalam@1mg.com",
+      "name": "Sankar Yadalam",
+      "role": "payroll_admin",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "kanika.katyal@1mg.com",
+      "name": "Kanika Katyal",
+      "role": "maker"
+    },
+    {
+      "email": "sahdev.kumar@1mg.com",
+      "name": "Sahdev Kumar",
+      "role": "maker"
+    },
+    {
+      "email": "minakshi.chugh@1mg.com",
+      "name": "Minakshi Chugh",
+      "role": "maker"
+    },
+    {
+      "email": "manish.bansal@1mg.com",
+      "name": "Manish Bansal",
+      "role": "maker"
+    },
+    {
+      "email": "rupali.chaudhary@1mg.com",
+      "name": "Rupali Chaudhary",
+      "role": "maker"
+    },
+    {
+      "email": "divya.chhabra@1mg.com",
+      "name": "Divya Chhabra",
+      "role": "maker"
+    },
+    {
+      "email": "abhishek.pareek@1mg.com",
+      "name": "Abhishek Pareek",
+      "role": "maker"
+    },
+    {
+      "email": "abhishek.singh19@1mg.com",
+      "name": "Abhishek Singh",
+      "role": "maker"
+    },
+    {
+      "email": "it.team@1mg.com",
+      "name": "IT Team",
+      "role": "maker",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "business.spoc@1mg.com",
+      "name": "Business SPOC",
+      "role": "maker"
+    },
+    {
+      "email": "rahul.tewatia@1mg.com",
+      "name": "Rahul Tewatia",
+      "role": "hrbp"
+    },
+    {
+      "email": "charvi.sarin@1mg.com",
+      "name": "Charvi Sarin",
+      "role": "hrbp"
+    },
+    {
+      "email": "asha.khan@1mg.com",
+      "name": "Asha Khan",
+      "role": "hrbp"
+    },
+    {
+      "email": "janhavi.malhotra@1mg.com",
+      "name": "Janhavi Malhotra",
+      "role": "hrbp"
+    },
+    {
+      "email": "megha.aggarwal@1mg.com",
+      "name": "Megha Aggarwal",
+      "role": "hrbp"
+    },
+    {
+      "email": "rashi.agarwal@1mg.com",
+      "name": "Rashi Agarwal",
+      "role": "hod"
+    },
+    {
+      "email": "vipin.rajput@1mg.com",
+      "name": "Vipin Rajput",
+      "role": "hod"
+    },
+    {
+      "email": "khwaja.azeem@1mg.com",
+      "name": "Khwaja Mohd Azeem",
+      "role": "hod"
+    },
+    {
+      "email": "abhinav.johary@1mg.com",
+      "name": "Abhinav Johary",
+      "role": "hod"
+    },
+    {
+      "email": "it.hod@1mg.com",
+      "name": "IT HOD",
+      "role": "hod",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "business.hod@1mg.com",
+      "name": "Business HOD",
+      "role": "hod"
+    },
+    {
+      "email": "payroll@1mg.com",
+      "name": "Payroll Admin",
+      "role": "payroll",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "amit.khatri@1mg.com",
+      "name": "Amit Khatri",
+      "role": "payroll_admin",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "amit.kumar@1mg.com",
+      "name": "Amit Kumar",
+      "role": "hod"
+    },
+    {
+      "email": "tanya.agrawal@1mg.com",
+      "name": "Tanya Agrawal",
+      "role": "maker"
+    },
+    {
+      "email": "nikhil.doegar@1mg.com",
+      "name": "Nikhil Doegar",
+      "role": "hod"
+    },
+    {
+      "email": "divya.jain1@1mg.com",
+      "name": "Divya Jain",
+      "role": "maker"
+    },
+    {
+      "email": "prateek@1mg.com",
+      "name": "Prateek Verma",
+      "role": "hod"
+    },
+    {
+      "email": "shanmugam.rk@1mg.com",
+      "name": "Shanmugam K",
+      "role": "hod"
+    },
+    {
+      "email": "ketan.bhatia@1mg.com",
+      "name": "Ketan Bhatia",
+      "role": "hod"
+    },
+    {
+      "email": "manju.s@1mg.com",
+      "name": "Manjunath Somasekhararadhya",
+      "role": "hod"
+    },
+    {
+      "email": "tanmay@1mg.com",
+      "name": "Tanmay Saksena",
+      "role": "hod"
+    },
+    {
+      "email": "shikhar.saxena@1mg.com",
+      "name": "Shikhar Saxena",
+      "role": "maker"
+    },
+    {
+      "email": "devinder.a@1mg.com",
+      "name": "Devinder Ahluwalia",
+      "role": "hod"
+    },
+    {
+      "email": "anubhav.mehrotra@1mg.com",
+      "name": "Anubhav Mehrotra",
+      "role": "hod"
+    },
+    {
+      "email": "santosh.pawar@1mg.com",
+      "name": "Santosh Pawar",
+      "role": "maker"
+    },
+    {
+      "email": "amit.malik@1mg.com",
+      "name": "Amit Malik",
+      "role": "hod"
+    },
+    {
+      "email": "debapriya.chakraborty@1mg.com",
+      "name": "Debapriya Chakraborty",
+      "role": "maker"
+    },
+    {
+      "email": "anushka.agarwal@1mg.com",
+      "name": "Anushka Agarwal",
+      "role": "hod"
+    },
+    {
+      "email": "manisha@1mg.com",
+      "name": "Manisha Mishra",
+      "role": "hod"
+    },
+    {
+      "email": "rahul.nayar@1mg.com",
+      "name": "Rahul Nayar",
+      "role": "maker"
+    },
+    {
+      "email": "deepanshu.kumar@1mg.com",
+      "name": "Deepanshu Kumar",
+      "role": "maker"
+    },
+    {
+      "email": "santanu.ghosh@1mg.com",
+      "name": "Santanu Ghosh",
+      "role": "hod"
+    },
+    {
+      "email": "yatharth.bhargova@1mg.com",
+      "name": "Yatharth Bhargova",
+      "role": "hod"
+    },
+    {
+      "email": "deepa.chadha@1mg.com",
+      "name": "Deepa Chadha",
+      "role": "payroll_admin",
+      "allowed_modules": [
+        "*"
+      ]
+    },
+    {
+      "email": "meetu.garg@1mg.com",
+      "name": "Meetu Garg",
+      "role": "hod"
+    },
+    {
+      "email": "karan.chopra@1mg.com",
+      "name": "Karan Chopra",
+      "role": "hod"
+    },
+    {
+      "email": "drrajeev.sharma@1mg.com",
+      "name": "Dr Sharma",
+      "role": "hod"
+    },
+    {
+      "email": "vipul.jain@1mg.com",
+      "name": "Vipul Jain",
+      "role": "maker"
+    },
+    {
+      "email": "prashant.nag@1mg.com",
+      "name": "Prashant Nag",
+      "role": "hod"
+    },
+    {
+      "email": "bijoy.sahoo@1mg.com",
+      "name": "Bijoy Sahoo",
+      "role": "maker"
+    },
+    {
+      "email": "shubham.m2@1mg.com",
+      "name": "Shubham",
+      "role": "maker"
+    },
+    {
+      "email": "tanvi.arora@1mg.com",
+      "name": "Tanvi Arora",
+      "role": "maker"
+    },
+    {
+      "email": "kapil.kumar1@1mg.com",
+      "name": "Kapil Kumar",
+      "role": "maker"
+    },
+    {
+      "email": "prakash.singh2@1mg.com",
+      "name": "Prakash Singh",
+      "role": "maker"
+    },
+    {
+      "email": "kirti.bodra@1mg.com",
+      "name": "Kirti Bodra",
+      "role": "maker"
+    },
+    {
+      "email": "medha.saxena@1mg.com",
+      "name": "Medha Saxena",
+      "role": "maker"
+    },
+    {
+      "email": "rohit.kumar5@1mg.com",
+      "name": "Rohit Kumar",
+      "role": "maker"
+    },
+    {
+      "email": "ankur.gupta@1mg.com",
+      "name": "Ankur Gupta",
+      "role": "maker"
+    },
+    {
+      "email": "rohan.jha@1mg.com",
+      "name": "Rohan Jha",
+      "role": "maker"
+    },
+    {
+      "email": "ajay.madan@1mg.com",
+      "name": "Ajay Madaan",
+      "role": "maker"
+    },
+    {
+      "email": "parmee.gala@1mg.com",
+      "name": "Parmee Gala",
+      "role": "maker"
+    },
+    {
+      "email": "ishan.chakraborty@1mg.com",
+      "name": "Ishan Chakraborty",
+      "role": "maker"
+    },
+    {
+      "email": "deblina.dash@1mg.com",
+      "name": "Deblina Dash",
+      "role": "maker"
+    },
+    {
+      "email": "sonu.ranjan@1mg.com",
+      "name": "Sonu Ranjan",
+      "role": "maker"
+    },
+    {
+      "email": "nishant.jaiswal@1mg.com",
+      "name": "Nishant Jaiswal",
+      "role": "maker"
+    },
+    {
+      "email": "mahipal.singh1@1mg.com",
+      "name": "Mahipal Singh",
+      "role": "maker"
+    },
+    {
+      "email": "abhijeet.sen@1mg.com",
+      "name": "Abhijeet Sen",
+      "role": "maker"
+    },
+    {
+      "email": "neeraj.singh@1mg.com",
+      "name": "Neeraj Singh",
+      "role": "payroll_admin"
+    }
+  ],
+  "earning_heads": [
+    {
+      "name": "RETENTION BONUS",
+      "employee_home": "ALL",
+      "initiators": [
+        "kanika.katyal@1mg.com"
+      ],
+      "hrbp": "NA",
+      "approver": "rashi.agarwal@1mg.com"
+    },
+    {
+      "name": "ONE TIME BONUS",
+      "employee_home": "ALL",
+      "initiators": [
+        "kanika.katyal@1mg.com"
+      ],
+      "hrbp": "NA",
+      "approver": "rashi.agarwal@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "IT ASSESTS RECOVERY",
+      "employee_home": "ALL",
+      "initiators": [
+        "it.team@1mg.com"
+      ],
+      "hrbp": "NA",
+      "approver": "it.hod@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "DAY CARE DEDUCTION",
+      "employee_home": "ALL",
+      "initiators": [
+        "sahdev.kumar@1mg.com"
+      ],
+      "hrbp": [
+        "rahul.tewatia@1mg.com"
+      ],
+      "approver": "vipin.rajput@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "REFYNE_ADVANCE",
+      "employee_home": "ALL",
+      "initiators": [
+        "sahdev.kumar@1mg.com"
+      ],
+      "hrbp": [
+        "rahul.tewatia@1mg.com"
+      ],
+      "approver": "vipin.rajput@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "LOAN AND ADVANCE",
+      "employee_home": "ALL",
+      "initiators": [
+        "sahdev.kumar@1mg.com"
+      ],
+      "hrbp": [
+        "rahul.tewatia@1mg.com"
+      ],
+      "approver": "vipin.rajput@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "LOAN DEDUCTION",
+      "employee_home": "ALL",
+      "initiators": [
+        "sahdev.kumar@1mg.com"
+      ],
+      "hrbp": [
+        "rahul.tewatia@1mg.com"
+      ],
+      "approver": "vipin.rajput@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "DURGA POOJA BONUS",
+      "employee_home": "ALL",
+      "initiators": [
+        "sahdev.kumar@1mg.com"
+      ],
+      "hrbp": [
+        "rahul.tewatia@1mg.com"
+      ],
+      "approver": "vipin.rajput@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "OVERTIME HOURS",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "hours"
+    },
+    {
+      "name": "FESTIVAL HOLIDAY DAYS",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "days"
+    },
+    {
+      "name": "NATIONAL HOLIDAY DAYS",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "days"
+    },
+    {
+      "name": "OTHER EARNING",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "INCENTIVE",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "OTHER DEDUCTION",
+      "employee_home": "Employee Home Wise",
+      "initiators": [
+        "business.spoc@1mg.com"
+      ],
+      "hrbp": [
+        "charvi.sarin@1mg.com",
+        "asha.khan@1mg.com",
+        "janhavi.malhotra@1mg.com",
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "business.hod@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "REFERRAL BONUS",
+      "employee_home": "ALL",
+      "initiators": [
+        "minakshi.chugh@1mg.com",
+        "manish.bansal@1mg.com",
+        "rupali.chaudhary@1mg.com",
+        "divya.chhabra@1mg.com",
+        "abhishek.pareek@1mg.com"
+      ],
+      "hrbp": "NA",
+      "routing_rules": [
+        {
+          "approver": "khwaja.azeem@1mg.com",
+          "initiators": [
+            "minakshi.chugh@1mg.com",
+            "manish.bansal@1mg.com"
+          ]
+        },
+        {
+          "approver": "rashi.agarwal@1mg.com",
+          "initiators": [
+            "rupali.chaudhary@1mg.com",
+            "divya.chhabra@1mg.com",
+            "abhishek.pareek@1mg.com"
+          ]
+        }
+      ],
+      "input_type": "amount",
+      "approver": null
+    },
+    {
+      "name": "JOINING BONUS",
+      "employee_home": "ALL",
+      "initiators": [
+        "minakshi.chugh@1mg.com",
+        "manish.bansal@1mg.com",
+        "rupali.chaudhary@1mg.com",
+        "divya.chhabra@1mg.com",
+        "abhishek.pareek@1mg.com"
+      ],
+      "hrbp": "NA",
+      "routing_rules": [
+        {
+          "approver": "khwaja.azeem@1mg.com",
+          "initiators": [
+            "minakshi.chugh@1mg.com",
+            "manish.bansal@1mg.com"
+          ]
+        },
+        {
+          "approver": "rashi.agarwal@1mg.com",
+          "initiators": [
+            "rupali.chaudhary@1mg.com",
+            "divya.chhabra@1mg.com",
+            "abhishek.pareek@1mg.com"
+          ]
+        }
+      ],
+      "input_type": "amount",
+      "approver": null
+    },
+    {
+      "name": "NOTICE PERIOD BUYOUT",
+      "employee_home": "ALL",
+      "initiators": [
+        "minakshi.chugh@1mg.com",
+        "manish.bansal@1mg.com",
+        "rupali.chaudhary@1mg.com",
+        "divya.chhabra@1mg.com",
+        "abhishek.pareek@1mg.com"
+      ],
+      "hrbp": "NA",
+      "routing_rules": [
+        {
+          "approver": "khwaja.azeem@1mg.com",
+          "initiators": [
+            "minakshi.chugh@1mg.com",
+            "manish.bansal@1mg.com"
+          ]
+        },
+        {
+          "approver": "rashi.agarwal@1mg.com",
+          "initiators": [
+            "rupali.chaudhary@1mg.com",
+            "divya.chhabra@1mg.com",
+            "abhishek.pareek@1mg.com"
+          ]
+        }
+      ],
+      "input_type": "amount",
+      "approver": null
+    },
+    {
+      "name": "WEEKLY INCENTIVE 1",
+      "employee_home": "Diagnostic Supply Chain",
+      "initiators": [
+        "abhishek.singh19@1mg.com"
+      ],
+      "hrbp": [
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "abhinav.johary@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "WEEKLY INCENTIVE 2",
+      "employee_home": "Diagnostic Supply Chain",
+      "initiators": [
+        "abhishek.singh19@1mg.com"
+      ],
+      "hrbp": [
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "abhinav.johary@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "WEEKLY INCENTIVE 3",
+      "employee_home": "Diagnostic Supply Chain",
+      "initiators": [
+        "abhishek.singh19@1mg.com"
+      ],
+      "hrbp": [
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "abhinav.johary@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "WEEKLY INCENTIVE 4",
+      "employee_home": "Diagnostic Supply Chain",
+      "initiators": [
+        "abhishek.singh19@1mg.com"
+      ],
+      "hrbp": [
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "abhinav.johary@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "WEEKLY INCENTIVE 5",
+      "employee_home": "Diagnostic Supply Chain",
+      "initiators": [
+        "abhishek.singh19@1mg.com"
+      ],
+      "hrbp": [
+        "megha.aggarwal@1mg.com"
+      ],
+      "approver": "abhinav.johary@1mg.com",
+      "input_type": "amount"
+    },
+    {
+      "name": "LONG LEAVES",
+      "employee_home": "Employee Home Wise",
+      "initiators": [],
+      "hrbp": "NA",
+      "approver": "NA",
+      "input_type": "days"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+[
+  {
+    "email": "amit.kumar@1mg.com",
+    "name": "Amit Kumar",
+    "employee_id": "EMP_5999",
+    "role": "hod"
+  },
+  {
+    "email": "tanya.agrawal@1mg.com",
+    "name": "Tanya Agrawal",
+    "employee_id": "EMP_5364",
+    "role": "maker"
+  },
+  {
+    "email": "charvi.sarin@1mg.com",
+    "name": "Charvi Sarin",
+    "employee_id": "EMP_5125",
+    "role": "hrbp"
+  },
+  {
+    "email": "nikhil.doegar@1mg.com",
+    "name": "Nikhil Doegar",
+    "employee_id": "EMP_280",
+    "role": "hod"
+  },
+  {
+    "email": "divya.jain1@1mg.com",
+    "name": "Divya Jain",
+    "employee_id": "EMP_5036",
+    "role": "maker"
+  },
+  {
+    "email": "prateek@1mg.com",
+    "name": "Prateek Verma",
+    "employee_id": "EMP_6891",
+    "role": "hod"
+  },
+  {
+    "email": "shanmugam.rk@1mg.com",
+    "name": "Shanmugam K",
+    "employee_id": "EMP_6143",
+    "role": "hod"
+  },
+  {
+    "email": "ketan.bhatia@1mg.com",
+    "name": "Ketan Bhatia",
+    "employee_id": "EMP_6893",
+    "role": "hod"
+  },
+  {
+    "email": "manju.s@1mg.com",
+    "name": "Manjunath Somasekhararadhya",
+    "employee_id": "EMP_HC3022",
+    "role": "hod"
+  },
+  {
+    "email": "tanmay@1mg.com",
+    "name": "Tanmay Saksena",
+    "employee_id": "EMP_197",
+    "role": "hod"
+  },
+  {
+    "email": "shikhar.saxena@1mg.com",
+    "name": "Shikhar Saxena",
+    "employee_id": "EMP_5698",
+    "role": "maker"
+  },
+  {
+    "email": "asha.khan@1mg.com",
+    "name": "Asha Khan",
+    "employee_id": "EMP_3014",
+    "role": "hrbp"
+  },
+  {
+    "email": "devinder.a@1mg.com",
+    "name": "Devinder Ahluwalia",
+    "employee_id": "EMP_HC0283",
+    "role": "hod"
+  },
+  {
+    "email": "anubhav.mehrotra@1mg.com",
+    "name": "Anubhav Mehrotra",
+    "employee_id": "EMP_6892",
+    "role": "hod"
+  },
+  {
+    "email": "santosh.pawar@1mg.com",
+    "name": "Santosh Pawar",
+    "employee_id": "EMP_5126",
+    "role": "maker"
+  },
+  {
+    "email": "amit.malik@1mg.com",
+    "name": "Amit Malik",
+    "employee_id": "EMP_HC6515",
+    "role": "hod"
+  },
+  {
+    "email": "debapriya.chakraborty@1mg.com",
+    "name": "Debapriya Chakraborty",
+    "employee_id": "EMP_5042",
+    "role": "maker"
+  },
+  {
+    "email": "anushka.agarwal@1mg.com",
+    "name": "Anushka Agarwal",
+    "employee_id": "EMP_5037",
+    "role": "hod"
+  },
+  {
+    "email": "manisha@1mg.com",
+    "name": "Manisha Mishra",
+    "employee_id": "EMP_1595",
+    "role": "hod"
+  },
+  {
+    "email": "rahul.nayar@1mg.com",
+    "name": "Rahul Nayar",
+    "employee_id": "EMP_HC5423",
+    "role": "maker"
+  },
+  {
+    "email": "deepanshu.kumar@1mg.com",
+    "name": "Deepanshu Kumar",
+    "employee_id": "EMP_5189",
+    "role": "maker"
+  },
+  {
+    "email": "janhavi.malhotra@1mg.com",
+    "name": "Janhavi Malhotra",
+    "employee_id": "EMP_5096",
+    "role": "hrbp"
+  },
+  {
+    "email": "santanu.ghosh@1mg.com",
+    "name": "Santanu Ghosh",
+    "employee_id": "EMP_HC4717",
+    "role": "hod"
+  },
+  {
+    "email": "yatharth.bhargova@1mg.com",
+    "name": "Yatharth Bhargova",
+    "employee_id": "EMP_7000",
+    "role": "hod"
+  },
+  {
+    "email": "deepa.chadha@1mg.com",
+    "name": "Deepa Chadha",
+    "employee_id": "EMP_5837",
+    "role": "hod"
+  },
+  {
+    "email": "meetu.garg@1mg.com",
+    "name": "Meetu Garg",
+    "employee_id": "EMP_1842",
+    "role": "hod"
+  },
+  {
+    "email": "karan.chopra@1mg.com",
+    "name": "Karan Chopra",
+    "employee_id": "EMP_6505",
+    "role": "hod"
+  },
+  {
+    "email": "drrajeev.sharma@1mg.com",
+    "name": "Dr. Rajeev Sharma",
+    "employee_id": "EMP_4570",
+    "role": "hod"
+  },
+  {
+    "email": "vipul.jain@1mg.com",
+    "name": "Vipul Jain",
+    "employee_id": "EMP_5067",
+    "role": "maker"
+  },
+  {
+    "email": "megha.aggarwal@1mg.com",
+    "name": "Megha Aggarwal",
+    "employee_id": "EMP_6072",
+    "role": "hrbp"
+  },
+  {
+    "email": "prashant.nag@1mg.com",
+    "name": "Prashant Nag",
+    "employee_id": "EMP_6596",
+    "role": "hod"
+  },
+  {
+    "email": "bijoy.sahoo@1mg.com",
+    "name": "Bijoy Sahoo",
+    "employee_id": "EMP_6732",
+    "role": "maker"
+  },
+  {
+    "email": "shubham.m2@1mg.com",
+    "name": "Shubham",
+    "employee_id": "EMP_6834",
+    "role": "maker"
+  },
+  {
+    "email": "tanvi.arora@1mg.com",
+    "name": "Tanvi Arora",
+    "employee_id": "EMP_2697",
+    "role": "maker"
+  },
+  {
+    "email": "kapil.kumar1@1mg.com",
+    "name": "Kapil Kumar",
+    "employee_id": "EMP_3377",
+    "role": "maker"
+  },
+  {
+    "email": "prakash.singh2@1mg.com",
+    "name": "Prakash Narain Singh",
+    "employee_id": "EMP_5204",
+    "role": "maker"
+  },
+  {
+    "email": "kirti.bodra@1mg.com",
+    "name": "Kirti Bodra",
+    "employee_id": "EMP_5849",
+    "role": "maker"
+  },
+  {
+    "email": "medha.saxena@1mg.com",
+    "name": "Medha Saxena",
+    "employee_id": "EMP_2656",
+    "role": "maker"
+  },
+  {
+    "email": "rohit.kumar5@1mg.com",
+    "name": "Rohit kumar",
+    "employee_id": "EMP_HC0903",
+    "role": "maker"
+  },
+  {
+    "email": "ankur.gupta@1mg.com",
+    "name": "Ankur Gupta",
+    "employee_id": "EMP_HC0164",
+    "role": "maker"
+  },
+  {
+    "email": "rohan.jha@1mg.com",
+    "name": "Rohan Kumar Jha",
+    "employee_id": "EMP_HC3836",
+    "role": "maker"
+  },
+  {
+    "email": "ajay.madan@1mg.com",
+    "name": "Ajay Kumar Madaan",
+    "employee_id": "EMP_HC0331",
+    "role": "maker"
+  },
+  {
+    "email": "parmee.gala@1mg.com",
+    "name": "Parmee Gala",
+    "employee_id": "EMP_HC3210",
+    "role": "maker"
+  },
+  {
+    "email": "ishan.chakraborty@1mg.com",
+    "name": "Ishan Chakraborty",
+    "employee_id": "EMP_HC1565",
+    "role": "maker"
+  },
+  {
+    "email": "deblina.dash@1mg.com",
+    "name": "Deblina Dash",
+    "employee_id": "EMP_5687",
+    "role": "maker"
+  },
+  {
+    "email": "sonu.ranjan@1mg.com",
+    "name": "Sonu Ranjan",
+    "employee_id": "EMP_HC1310",
+    "role": "maker"
+  },
+  {
+    "email": "nishant.jaiswal@1mg.com",
+    "name": "Nishant Jaiswal",
+    "employee_id": "EMP_HC6108",
+    "role": "maker"
+  },
+  {
+    "email": "mahipal.singh1@1mg.com",
+    "name": "Mahipal Singh",
+    "employee_id": "EMP_4395",
+    "role": "maker"
+  },
+  {
+    "email": "abhijeet.sen@1mg.com",
+    "name": "Abhijeet Sen",
+    "employee_id": "EMP_HC0268",
+    "role": "maker"
+  }
+]

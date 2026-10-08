@@ -1,0 +1,2516 @@
+[
+  {
+    "earning_head": "RETENTION BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "kanika.katyal@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "rashi.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "ONE TIME BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "kanika.katyal@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "rashi.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "IT ASSESTS RECOVERY",
+    "employee_home": "ALL",
+    "initiators": [
+      "it.team@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "it.hod@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "DAY CARE DEDUCTION",
+    "employee_home": "ALL",
+    "initiators": [
+      "sahdev.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "rahul.tewatia@1mg.com"
+    ],
+    "approvers": [
+      "vipin.rajput@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "REFYNE_ADVANCE",
+    "employee_home": "ALL",
+    "initiators": [
+      "sahdev.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "rahul.tewatia@1mg.com"
+    ],
+    "approvers": [
+      "vipin.rajput@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LOAN AND ADVANCE",
+    "employee_home": "ALL",
+    "initiators": [
+      "sahdev.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "rahul.tewatia@1mg.com"
+    ],
+    "approvers": [
+      "vipin.rajput@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LOAN DEDUCTION",
+    "employee_home": "ALL",
+    "initiators": [
+      "sahdev.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "rahul.tewatia@1mg.com"
+    ],
+    "approvers": [
+      "vipin.rajput@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "DURGA POOJA BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "sahdev.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "rahul.tewatia@1mg.com"
+    ],
+    "approvers": [
+      "vipin.rajput@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "rahul.nayar@1mg.com",
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OVERTIME HOURS",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "FESTIVAL HOLIDAY DAYS",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NATIONAL HOLIDAY DAYS",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER EARNING",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "bijoy.sahoo@1mg.com",
+      "shubham.m2@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "tanvi.arora@1mg.com",
+      "kapil.kumar1@1mg.com",
+      "prakash.singh2@1mg.com",
+      "kirti.bodra@1mg.com",
+      "medha.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "rohit.kumar5@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "ankur.gupta@1mg.com",
+      "rohan.jha@1mg.com",
+      "ajay.madan@1mg.com",
+      "parmee.gala@1mg.com",
+      "ishan.chakraborty@1mg.com",
+      "deblina.dash@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "sonu.ranjan@1mg.com",
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "nishant.jaiswal@1mg.com",
+      "mahipal.singh1@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Pharmacy Supply Chain",
+    "initiators": [
+      "abhijeet.sen@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "INCENTIVE",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "B&M Retail",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "santanu.ghosh@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "OTHER DEDUCTION",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "REFERRAL BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "minakshi.chugh@1mg.com",
+      "manish.bansal@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "khwaja.azeem@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "REFERRAL BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "rupali.chaudhary@1mg.com",
+      "divya.chhabra@1mg.com",
+      "abhishek.pareek@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "rashi.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "JOINING BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "minakshi.chugh@1mg.com",
+      "manish.bansal@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "khwaja.azeem@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "JOINING BONUS",
+    "employee_home": "ALL",
+    "initiators": [
+      "rupali.chaudhary@1mg.com",
+      "divya.chhabra@1mg.com",
+      "abhishek.pareek@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "rashi.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NOTICE PERIOD BUYOUT",
+    "employee_home": "ALL",
+    "initiators": [
+      "minakshi.chugh@1mg.com",
+      "manish.bansal@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "khwaja.azeem@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "NOTICE PERIOD BUYOUT",
+    "employee_home": "ALL",
+    "initiators": [
+      "rupali.chaudhary@1mg.com",
+      "divya.chhabra@1mg.com",
+      "abhishek.pareek@1mg.com"
+    ],
+    "hrbps": [
+      "NA"
+    ],
+    "approvers": [
+      "rashi.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "WEEKLY INCENTIVE 1",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "WEEKLY INCENTIVE 2",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "WEEKLY INCENTIVE 3",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "WEEKLY INCENTIVE 4",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "WEEKLY INCENTIVE 5",
+    "employee_home": "Diagnostic Supply Chain",
+    "initiators": [
+      "abhishek.singh19@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "abhinav.johary@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Category Management",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Dataverse",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "nikhil.doegar@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "eDiagnostics",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "shanmugam.rk@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "ePharmacy_Consumer Products",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "ketan.bhatia@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "ePharmacy",
+    "initiators": [
+      "tanya.agrawal@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Marketing",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Product & Technology_Engineering",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "manju.s@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Product & Technology_Product-1",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Product & Technology_Product-2",
+    "initiators": [
+      "divya.jain1@1mg.com"
+    ],
+    "hrbps": [
+      "charvi.sarin@1mg.com"
+    ],
+    "approvers": [
+      "prateek@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Planning & Purchase",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Hospitals",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "devinder.a@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Healthcare Services & Corporate Delivery",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anushka.agarwal@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Customer Experience",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Speciality Pharma Business (PSP)",
+    "initiators": [
+      "debapriya.chakraborty@1mg.com",
+      "santosh.pawar@1mg.com",
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "manisha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Admin & IT",
+    "initiators": [
+      "shikhar.saxena@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "anubhav.mehrotra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Corporate Health & Wellness",
+    "initiators": [
+      "santosh.pawar@1mg.com"
+    ],
+    "hrbps": [
+      "asha.khan@1mg.com"
+    ],
+    "approvers": [
+      "amit.malik@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Finance",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "yatharth.bhargova@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Founder's Office",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "tanmay@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Human Resources",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "deepa.chadha@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Institutional Quality",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "meetu.garg@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Legal",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "karan.chopra@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Medical Affairs",
+    "initiators": [
+      "deepanshu.kumar@1mg.com"
+    ],
+    "hrbps": [
+      "janhavi.malhotra@1mg.com"
+    ],
+    "approvers": [
+      "drrajeev.sharma@1mg.com"
+    ]
+  },
+  {
+    "earning_head": "LONG LEAVES",
+    "employee_home": "Clinical Excellence",
+    "initiators": [
+      "vipul.jain@1mg.com"
+    ],
+    "hrbps": [
+      "megha.aggarwal@1mg.com"
+    ],
+    "approvers": [
+      "prashant.nag@1mg.com"
+    ]
+  }
+]
