@@ -1,0 +1,30 @@
+{
+  "fixtures": [
+    {
+      "file": "tcs_minimal.json",
+      "profile": "tcs",
+      "expect": {
+        "min_rows": 2,
+        "roles_any": ["MO_MBBS", "NURSE_GNM"],
+        "totals_consistent": true
+      }
+    },
+    {
+      "file": "taco_with_admin.json",
+      "profile": "taco",
+      "expect": {
+        "min_rows": 2,
+        "must_have_role": "OHC_ADMIN_INVOICE_PCT",
+        "totals_consistent": true
+      }
+    },
+    {
+      "file": "generic_minimal.json",
+      "profile": "generic",
+      "expect": {
+        "min_rows": 1,
+        "totals_consistent": true
+      }
+    }
+  ]
+}

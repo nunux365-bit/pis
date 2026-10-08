@@ -1,0 +1,54 @@
+{
+  "mis_summary": {
+    "client_site_key": "golden_tcs_noida_demo",
+    "billing_period_start": "2026-02-01",
+    "billing_period_end": "2026-02-28",
+    "working_days": 20
+  },
+  "summary_rows": [
+    {
+      "contract_rate_line_id": "11111111-1111-4111-8111-111111111101",
+      "employee_external_id": "CON1MGHC-GOLD-01",
+      "employee_name": "Golden MO",
+      "service": "MO_MBBS",
+      "role_code": "MO_MBBS",
+      "contracted_rate": 50000.0,
+      "contracted_count": 1,
+      "present_days": 20,
+      "absent_days": 0,
+      "final_amount": 50000.0,
+      "comments": null,
+      "is_omitted": false,
+      "omit_reason": null,
+      "calc_notes": "T=20 A=0 P=20 path(2) 50000*20/20"
+    },
+    {
+      "contract_rate_line_id": "11111111-1111-4111-8111-111111111102",
+      "employee_external_id": "CON1MGHC-GOLD-02",
+      "employee_name": "Golden Nurse",
+      "service": "NURSE_GNM",
+      "role_code": "NURSE_GNM",
+      "contracted_rate": 30000.0,
+      "contracted_count": 1,
+      "present_days": 18,
+      "absent_days": 2,
+      "final_amount": 27000.0,
+      "comments": null,
+      "is_omitted": false,
+      "omit_reason": null,
+      "calc_notes": "absent-deduction illustrative"
+    }
+  ],
+  "totals": {
+    "final_amount_total": 77000.0,
+    "rows_included": 2,
+    "rows_omitted": 0
+  },
+  "validation": {
+    "status": "ok",
+    "validation_errors": [],
+    "self_checks": [
+      {"name": "golden_fixture", "passed": true, "details": "synthetic approved MIS"}
+    ]
+  }
+}
