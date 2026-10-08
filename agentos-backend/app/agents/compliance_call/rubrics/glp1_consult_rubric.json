@@ -1,0 +1,529 @@
+{
+  "meta": {
+    "rubric_name": "GLP-1 E-Consult Quality Rating",
+    "source_document": "GLP1_Consult_Quality_Report.docx",
+    "version": "1.2",
+    "version_notes": "v1.2 \u2014 Added consult_type detection (initial vs follow_up) inferred from the transcript, and made initiation-only items NA for follow-up consults: bmi_weight_target, prior_wl_attempts, dose_escalation, mechanism_of_action, lab_baseline. v1.1 \u2014 Replaced 4-tier criticality (CRITICAL/HIGH/MEDIUM/LOW) + holistic /10 domain scores with 3-tier within-domain weights (10/6/2) + binary YES/NO/NA per item. Added deterministic per-item YES rules. Compressed grading bands. Math is now fully deterministic given the per-item statuses.",
+    "scope": "GLP-1 e-consultations. Applies to both initial prescribing and follow-up titration consults. consult_type (initial|follow_up) is inferred from the transcript per scoring.consult_type_detection and changes ONLY the na_rule of the initiation-only items listed in version_notes; all other items and the math are unchanged.",
+    "owner": "1mg Clinical Standards",
+    "assessment_methodology": "Audio structural analysis (turn count, turn duration, speech activity ratio) combined with GLP-1 clinical quality benchmarks. Audio structural patterns are reliable proxies for consultation quality but do not change the scored composite \u2014 they are reported as flags only.",
+    "composite_max": 100,
+    "score_unit": "percentage",
+    "rubric_authority": {
+      "status": "SACROSANCT",
+      "directive": "This rubric is sacrosanct and applies to ALL cases without exception. The LLM scorer, human reviewers, and any downstream automation MUST score every consult strictly against the domains, cross-domain weights, within-domain tier weights (10/6/2), per-item YES rules, composite formula, and grading bands defined in this JSON. No domain may be added, removed, re-weighted, renamed, or re-tagged at scoring time. No item may be inferred, substituted, or skipped because it 'feels less relevant' for a given consult. Per-item statuses are strictly YES, NO, or NA \u2014 there is no PARTIAL. If a checklist item is genuinely not applicable (e.g., pregnancy/contraception for a male patient), mark it NA per the YES rule and exclude it from both numerator and denominator. Any change to this rubric must be a versioned update to this file, signed off by the rubric owner."
+    }
+  },
+
+  "math": {
+    "status_enum": ["YES", "NO", "NA"],
+    "domain_pct_formula": "domain_pct = (sum of tier_weight over items with status=YES) / (sum of tier_weight over items with status in {YES, NO}) * 100",
+    "composite_formula": "composite_pct = sum over domains of (domain_pct * cross_domain_weight_pct) / 100",
+    "rounding": "Round both domain_pct and composite_pct to 1 decimal place.",
+    "n_a_handling": "Items with status NA are excluded from BOTH numerator and denominator of the domain_pct.",
+    "tier_weights": {
+      "MUST":   10,
+      "SHOULD":  6,
+      "NICE":    2
+    }
+  },
+
+  "grading_bands": [
+    { "label": "Strong",                "grade": "A",  "min": 80, "max": 100 },
+    { "label": "Adequate",              "grade": "B",  "min": 65, "max": 79.9 },
+    { "label": "Partial",               "grade": "C",  "min": 50, "max": 64.9 },
+    { "label": "Below Standard",        "grade": "D",  "min": 35, "max": 49.9 },
+    { "label": "Borderline Inadequate", "grade": "D+", "min": 25, "max": 34.9 },
+    { "label": "Insufficient",          "grade": "F",  "min":  0, "max": 24.9 }
+  ],
+
+  "structural_indicators": {
+    "purpose": "Reported alongside the score as quality signals. They inform interpretation but do NOT change the /100 composite.",
+    "metrics": [
+      { "id": "duration_minutes",       "label": "Consult duration (minutes)",         "ideal_range": [15, 20],   "note": "Borderline\u2013short for a comprehensive GLP-1 initial prescription consult." },
+      { "id": "total_speaking_turns",   "label": "Total speaking turns",                "ideal_range": [25, 40],   "note": "Silence-gap clustering (gap > 1.0s) over Deepgram utterances." },
+      { "id": "avg_turn_length_seconds","label": "Average turn length (seconds)",       "interpretation": "Higher = more lecture-style; lower = more interactive." },
+      { "id": "longest_turn_seconds",   "label": "Longest single turn (seconds)",       "interpretation": ">120s = monologue concern; >180s = scripted lecture." },
+      { "id": "speech_activity_pct",    "label": "Speech activity (%)",                  "ideal_range": [70, 92],   "note": ">92% = no pause/reflection time; <70% = audio quality issue." },
+      { "id": "doctor_to_patient_ratio","label": "Diarized talk-time ratio (S0 vs others)",      "standard": "Interpret alongside qualitative review only — Deepgram S0 is not verified as clinician.", "computation": "Requires diarize + utterances: ratio of speaker 0 duration vs all other speakers; value duplicated under legacy key doctor_to_patient_ratio." }
+    ]
+  },
+
+  "scoring": {
+    "consult_type_detection": {
+      "purpose": "Some na_rules depend on whether this is an INITIAL (first prescribing) consult or a FOLLOW_UP consult. Determine consult_type FIRST from the transcript, then apply each item's na_rule. Only the items whose na_rule explicitly references consult_type are affected; every other item is scored identically regardless of consult_type.",
+      "values": ["initial", "follow_up"],
+      "default": "initial",
+      "follow_up_rule": "Classify the consult as follow_up ONLY IF the transcript contains a doctor question probing whether the patient is already on a GLP-1, is looking to increase / titrate up their existing dose, or is doing a follow-on / continuation consult (e.g. 'Are you already on a GLP-1?', 'Are you looking to increase your dosage?', 'Is this a follow-up / continuation?') AND the patient affirmatively confirms it (answers yes, or states they are already on / continuing a GLP-1). If there is no such confirmed doctor-question-plus-patient-yes exchange, the consult is initial. When ambiguous, default to initial (this keeps the initiation-only items scored rather than silently excused).",
+      "examples": {
+        "follow_up": "Doctor: 'Are you already on a GLP-1, and are you looking to increase the dose?' Patient: 'Yes, I'm on Wegovy 0.5 mg and want to go up to 1 mg.'",
+        "initial": "No exchange establishing that the patient is already on / continuing a GLP-1; the doctor is starting/prescribing therapy."
+      }
+    },
+    "domains": [
+      {
+        "id": "safety_screening",
+        "name": "Safety Screening",
+        "weight_pct": 25,
+        "checklist": [
+          {
+            "id": "mtc_men2_family_hx",
+            "item": "MTC/MEN2 family history (absolute contraindication)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explicitly asks about thyroid cancer family history OR multiple endocrine neoplasia (MEN2) family history at any point in the consult AND the patient's response is captured in the transcript.",
+            "no_rule":  "NO if the question is not asked, OR is asked too vaguely (e.g., 'any family disease?' without naming thyroid cancer or MEN2), OR the patient never responds.",
+            "na_rule":  "Never NA. Always applicable.",
+            "examples": {
+              "yes": "\u201CIs there any family history of thyroid cancer or pancreatic cancer?\u201D",
+              "no":  "\u201CAny family history of disease?\u201D (too vague \u2014 doesn't name thyroid cancer or MEN2)."
+            }
+          },
+          {
+            "id": "pancreatitis_hx",
+            "item": "History of pancreatitis (acute or chronic)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explicitly asks about the patient's personal history of pancreatitis (acute or chronic) AND the patient's response is captured. Match the concept by synonym, not exact keyword \u2014 'pancreatitis', 'pancreatic problem', 'pancreas issue', 'pancreatic disease', 'inflammation of the pancreas', etc. all count.",
+            "no_rule":  "NO if not asked, OR asked too vaguely (e.g., 'any GI issues?' / 'any stomach problems?' without naming the pancreas).",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CIs there any history of pancreatitis sir, inflammation of pancreatitis?\u201D OR \u201CAny pancreatic problem / pancreas issue in the past?\u201D",
+              "no":  "\u201CAny stomach problems in the past?\u201D"
+            }
+          },
+          {
+            "id": "insulin_su_meds",
+            "item": "Current medications \u2014 insulin/SU (hypoglycemia risk)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor performs a substantive medication review that specifically captures whether the patient is on insulin OR a sulfonylurea OR another diabetic agent (metformin alone is NOT sufficient because it's not a hypoglycemia-risk drug; the question must be about hypoglycemia-risk meds). If the patient is on insulin or SU, the doctor must also raise hypoglycemia risk for YES.",
+            "no_rule":  "NO if there is no medication review at all, OR the review is shallow (e.g., 'any weight loss medicine?' only), OR the patient is on insulin/SU and the doctor does not flag hypoglycemia risk.",
+            "na_rule":  "NA iff the patient is documented as non-diabetic or pre-diabetic AND is not on insulin or a sulfonylurea (no hypoglycemia-risk agent), so hypoglycemia review is not applicable. The diabetic status and medication inference must be supported by transcript content.",
+            "examples": {
+              "yes": "Doctor asks \u201CAny insulin or sulfonylurea?\u201D OR confirms full med list including diabetic agents.",
+              "no":  "Doctor only asks \u201Cany weight loss medicine?\u201D",
+              "na":  "Patient states they are non-diabetic (or pre-diabetic) and not on any insulin or sulfonylurea."
+            }
+          },
+          {
+            "id": "pregnancy_contraception",
+            "item": "Pregnancy / contraception status (women)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff (for a female patient of reproductive age, ~15\u201350 inclusive) the doctor asks about pregnancy status, contraception use, OR breastfeeding (any one of the three suffices).",
+            "no_rule":  "NO if the patient is a reproductive-age female and none of pregnancy/contraception/breastfeeding is asked.",
+            "na_rule":  "NA iff the patient is male, OR is documented as post-menopausal (>55), OR is pre-pubertal. The age inference must be supported by transcript content (patient self-reports age or sex).",
+            "examples": {
+              "yes": "\u201CAre you breastfeeding?\u201D OR \u201CAre you on contraception?\u201D",
+              "na":  "Male patient (e.g., 32-year-old male)."
+            }
+          },
+          {
+            "id": "gallstones_hx",
+            "item": "Personal history of gallstones (cholelithiasis risk)",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor explicitly asks about gallstones, cholelithiasis, kidney/gall stones, OR a focused biliary symptom history. Match by synonym, not exact keyword \u2014 'gallstones', 'gallbladder problem', 'gallbladder disease', 'cholelithiasis', 'stones in the gallbladder', etc. all count.",
+            "no_rule":  "NO if not asked, OR asked too vaguely (e.g., 'any GI issues?' alone).",
+            "na_rule":  "NA iff the patient self-reports prior cholecystectomy with no other biliary issues (rare; document the reason).",
+            "examples": {
+              "yes": "\u201CNo kidney stones or gallstones?\u201D OR \u201CAny gallbladder problem / gallbladder disease?\u201D",
+              "no":  "Not asked."
+            }
+          }
+        ]
+      },
+      {
+        "id": "clinical_assessment",
+        "name": "Clinical Assessment",
+        "weight_pct": 20,
+        "checklist": [
+          {
+            "id": "bmi_weight_target",
+            "item": "BMI, current weight, target weight goal",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff (a) the patient's current weight AND height are captured (BMI computable), AND (b) a target weight, weight-loss percentage goal, OR specific weight-loss number is discussed by either party AND acknowledged by the doctor.",
+            "no_rule":  "NO if weight or height is missing, OR there is no target/goal discussion at all.",
+            "na_rule":  "NA iff consult_type is follow_up AND the weight target/goal was clearly established previously (i.e., this is a continuation where the goal is treated as already agreed, not re-opened). See scoring.consult_type_detection. For initial consults, never NA.",
+            "examples": {
+              "yes": "Weight 112 kg + height 5\u20199\u201D + patient says \u201CI want to lose 10 kg\u201D and doctor acknowledges.",
+              "no":  "Weight + height captured but no target weight or goal mentioned.",
+              "na":  "Follow-up consult where the weight goal was set at an earlier visit and is treated as already agreed."
+            }
+          },
+          {
+            "id": "comorbidities",
+            "item": "Comorbidities: T2DM, hypertension, dyslipidemia, CVD",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff at least 2 of the 4 categories (T2DM, hypertension, dyslipidemia, CVD/heart disease) are addressed in the consult \u2014 either through doctor questioning OR patient volunteering, AND the doctor acknowledges the responses.",
+            "no_rule":  "NO if fewer than 2 categories are addressed.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "Patient mentions pre-diabetes and hypertension; doctor acknowledges both.",
+              "no":  "Only diabetes mentioned with no probe of HTN/lipids/CVD."
+            }
+          },
+          {
+            "id": "ckd_renal",
+            "item": "CKD/renal function (dose adjustment needed)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explicitly asks about kidney disease, renal function, eGFR, or creatinine, OR the patient volunteers renal-function info AND the doctor acknowledges or factors it into the dosing decision.",
+            "no_rule":  "NO if not asked, not volunteered, or volunteered but not acknowledged.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CAny kidney problems? Recent eGFR?\u201D",
+              "no":  "Renal status never raised."
+            }
+          },
+          {
+            "id": "prior_wl_attempts",
+            "item": "Previous weight loss attempts and outcomes",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor explicitly asks about previous diet, exercise, medication, or surgical attempts at weight loss, AND the patient describes outcomes (success, duration, regain). Currently being on a GLP-1 from a prior prescription does not count as a 'prior attempt' \u2014 it is the current treatment context.",
+            "no_rule":  "NO if not asked, OR asked but the patient gives no substantive response.",
+            "na_rule":  "NA iff consult_type is follow_up. This history is expected only at initiation; on a follow-up/continuation consult it is not applicable. See scoring.consult_type_detection.",
+            "examples": {
+              "yes": "Patient narrates 80\u201385 kg pre-corporate, 128 kg post-COVID, then Wegovy 0.25\u21920.5\u21921 mg history.",
+              "no":  "\u201CAny diet attempts?\u201D not asked at all.",
+              "na":  "Follow-up consult (patient already on / continuing a GLP-1)."
+            }
+          },
+          {
+            "id": "thyroid_hx_own",
+            "item": "Thyroid disease or nodules history",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor explicitly asks about the patient's OWN thyroid status, nodules, hypothyroidism, hyperthyroidism, or TSH AND the patient's response is captured. (Family thyroid cancer history is a different item \u2014 see Safety: MTC/MEN2.)",
+            "no_rule":  "NO if not asked, OR only family thyroid history is probed.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CAny thyroid issues yourself?\u201D \u2014 patient: \u201CNo.\u201D",
+              "no":  "Only family thyroid history is asked."
+            }
+          }
+        ]
+      },
+      {
+        "id": "psychosocial_lifestyle",
+        "name": "Psychosocial & Lifestyle",
+        "weight_pct": 15,
+        "checklist": [
+          {
+            "id": "eating_patterns",
+            "item": "Eating patterns: emotional eating, binge eating disorder",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor probes eating BEHAVIOR specifically \u2014 e.g., emotional eating, binge eating, restrictive patterns, eating frequency, hunger cues, food relationship. A generic diet-content question (\u201Cwhat do you eat?\u201D, \u201Cveg or non-veg?\u201D) does NOT count.",
+            "no_rule":  "NO if only diet content is asked, OR no eating-behavior question.",
+            "na_rule":  "NA unless an eating disorder, poor response, or behavioural concerns are suspected. Applicable (not NA) iff the transcript surfaces suspicion of an eating disorder, a poor treatment response, or behavioural concerns that warrant probing eating behaviour; otherwise NA. The suspicion must be supported by transcript content.",
+            "examples": {
+              "yes": "\u201CDo you eat when stressed?\u201D OR \u201CAny binge episodes?\u201D",
+              "no":  "\u201CWhat\u2019s your usual diet \u2014 junk food or healthy?\u201D (content, not behavior).",
+              "na":  "No indication of an eating disorder, poor response, or behavioural concern in the transcript."
+            }
+          },
+          {
+            "id": "mental_health",
+            "item": "Mental health status (depression, anxiety, eating disorders)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor asks about depression, anxiety, mood, eating disorder, or general mental health status AND the patient's response is captured.",
+            "no_rule":  "NO if not asked.",
+            "na_rule":  "NA unless clinically relevant. Applicable (not NA) iff the transcript surfaces a clinically relevant trigger \u2014 psychiatric history, an eating disorder, or an indication for behavioural intervention; otherwise NA. The clinical relevance must be supported by transcript content.",
+            "examples": {
+              "yes": "\u201CHow are you feeling mood-wise?\u201D OR \u201CAny depression or anxiety?\u201D",
+              "no":  "Not asked despite patient mentioning anxiety symptoms.",
+              "na":  "No psychiatric history, eating disorder, or behavioural-intervention indication in the transcript."
+            }
+          },
+          {
+            "id": "physical_activity",
+            "item": "Physical activity level and willingness",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor asks about the patient's CURRENT activity level (frequency or type) AND/OR provides a specific activity prescription tied to the patient's context (e.g., minutes per day, type of exercise).",
+            "no_rule":  "NO if only generic 'exercise' is mentioned without a context or prescription.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CWhat exercise do you currently do?\u201D \u2014 patient: \u201CRunning 4\u20135 days a week.\u201D OR doctor: \u201CDo brisk walking 40 minutes daily.\u201D",
+              "no":  "\u201CYou should do regular exercise.\u201D (generic)."
+            }
+          },
+          {
+            "id": "alcohol_intake",
+            "item": "Alcohol intake (addictive transfer risk with GLP-1)",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor explicitly asks about alcohol consumption frequency or quantity.",
+            "no_rule":  "NO if not asked.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CDo you drink alcohol? How often?\u201D",
+              "no":  "Alcohol never raised."
+            }
+          },
+          {
+            "id": "sleep_osa",
+            "item": "Sleep quality / obstructive sleep apnea",
+            "tier": "NICE", "tier_weight": 2,
+            "yes_rule": "YES iff the doctor asks about sleep quality, sleep apnea, snoring, or daytime fatigue.",
+            "no_rule":  "NO if not asked.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CHow\u2019s your sleep \u2014 any snoring or daytime fatigue?\u201D",
+              "no":  "Not asked."
+            }
+          }
+        ]
+      },
+      {
+        "id": "drug_education_informed_consent",
+        "name": "Drug Education & Informed Consent",
+        "weight_pct": 20,
+        "checklist": [
+          {
+            "id": "dose_escalation",
+            "item": "Dose escalation schedule (weekly up-titration)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explicitly states a multi-step up-titration schedule (e.g., 0.25 mg \u2192 0.5 mg \u2192 1 mg over weeks, OR 2.5 \u2192 5 \u2192 7.5 mg) OR explicitly confirms the patient already understands such a schedule. The schedule must include at least 2 distinct dose steps.",
+            "no_rule":  "NO if only injection frequency is mentioned (e.g., 'weekly') without a multi-step dose ladder.",
+            "na_rule":  "NA iff consult_type is follow_up. The full up-titration schedule is expected at initiation; on a follow-up/continuation consult it is not applicable. See scoring.consult_type_detection.",
+            "examples": {
+              "yes": "\u201CFirst 4 weeks 2.5 mg, then 4 weeks 5 mg, then 7.5 mg.\u201D",
+              "no":  "\u201CTake one injection per week.\u201D (no escalation).",
+              "na":  "Follow-up consult (patient already on / continuing a GLP-1)."
+            }
+          },
+          {
+            "id": "common_aes",
+            "item": "Common side effects: nausea, vomiting, diarrhea, constipation",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor names at least 3 of: nausea, vomiting, diarrhea, constipation, headache, decreased appetite, acidity, indigestion, abdominal pain.",
+            "no_rule":  "NO if fewer than 3 are named, OR none.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CAcidity, constipation, and diarrhea \u2014 normal in 1\u20132 weeks.\u201D (3 named)",
+              "no":  "\u201CYou might feel some nausea.\u201D (1 named)."
+            }
+          },
+          {
+            "id": "serious_aes",
+            "item": "Serious adverse events: pancreatitis, thyroid, gallstones",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor mentions at least 2 of: pancreatitis, thyroid C-cell tumour / MTC risk, gallstones / cholelithiasis, severe hypoglycemia, severe allergic reaction.",
+            "no_rule":  "NO if fewer than 2 are named, OR if the doctor frames the drug as 'completely safe' / 'no major side effects' (active downplay = NO regardless of counts).",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CPancreatitis is a long-term risk; thyroid C-cell tumour is a black-box warning.\u201D",
+              "no":  "\u201CCompletely safe \u2014 no major side effects.\u201D"
+            }
+          },
+          {
+            "id": "mechanism_of_action",
+            "item": "Mechanism of action explained (GLP-1 receptor agonism)",
+            "tier": "NICE", "tier_weight": 2,
+            "yes_rule": "YES iff the doctor explains how GLP-1 works at a substantive level \u2014 receptor agonism, satiety / appetite suppression, gastric emptying, OR insulin / glucose response.",
+            "no_rule":  "NO if mechanism is not explained, OR explained too vaguely (e.g., \u2018it helps with sugar\u2019 alone).",
+            "na_rule":  "NA iff consult_type is follow_up. The mechanism explanation is mandatory at initiation but not expected on a follow-up/continuation consult. See scoring.consult_type_detection.",
+            "examples": {
+              "yes": "\u201CGLP-1 mimics a gut hormone that increases satiety and slows gastric emptying.\u201D",
+              "no":  "\u201CIt will help your blood sugar and weight.\u201D (too vague).",
+              "na":  "Follow-up consult (patient already on / continuing a GLP-1)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "nutritional_counseling",
+        "name": "Nutritional Counseling",
+        "weight_pct": 10,
+        "checklist": [
+          {
+            "id": "protein_target",
+            "item": "Protein target (\u22651.2g/kg/day to preserve muscle mass)",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor counsels the patient to increase/prioritise protein intake to preserve muscle mass \u2014 either as a specific numeric target (grams per day OR grams per kg of body weight per day) OR as general protein counselling by synonym (e.g. 'high-protein diet', 'protein-rich meals', 'increase protein intake', 'eat more protein'). A numeric gram/kg target is NOT required.",
+            "no_rule":  "NO if protein intake is not addressed at all.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201C70 grams of protein per day, half from powder, half from diet.\u201D OR \u201CFocus on a high-protein diet / protein-rich meals / increase your protein intake.\u201D",
+              "no":  "Protein intake not mentioned at all."
+            }
+          },
+          {
+            "id": "long_term_diet",
+            "item": "Long-term diet strategy beyond drug cessation",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explicitly discusses what happens to diet after the GLP-1 is stopped, sustainability, weight-maintenance phase strategy, OR regain prevention.",
+            "no_rule":  "NO if there is no discussion of post-cessation diet or long-term maintenance.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CWhen you stop the medicine, weight regain is common unless you have built habits like X, Y, Z.\u201D",
+              "no":  "\u201CFollow a good diet.\u201D (no long-term framing)."
+            }
+          },
+          {
+            "id": "foods_to_avoid",
+            "item": "Foods to avoid / slow gastric emptying advice",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor names specific food types or foods to avoid, OR gives slow-gastric-emptying-related dietary guidance (e.g., small frequent meals, avoiding heavy fatty foods).",
+            "no_rule":  "NO if no specific foods or guidance.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CAvoid large fatty meals; eat small portions to manage nausea.\u201D",
+              "no":  "Not mentioned."
+            }
+          },
+          {
+            "id": "hydration",
+            "item": "Hydration guidance (dehydration common with nausea)",
+            "tier": "NICE", "tier_weight": 2,
+            "yes_rule": "YES iff the doctor mentions hydration, fluid intake, or dehydration risk. Match by synonym, not exact keyword \u2014 'drink more water', 'stay hydrated', 'increase fluids', 'keep yourself hydrated', 'drink plenty of fluids', etc. all count.",
+            "no_rule":  "NO if not mentioned.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CDrink at least 2 litres of water daily \u2014 dehydration is common with nausea.\u201D OR \u201CStay hydrated / drink more water / increase your fluids.\u201D",
+              "no":  "Not mentioned."
+            }
+          }
+        ]
+      },
+      {
+        "id": "followup_planning_monitoring",
+        "name": "Follow-Up Planning & Monitoring",
+        "weight_pct": 10,
+        "checklist": [
+          {
+            "id": "lab_baseline",
+            "item": "Lab baseline: HbA1c, lipids, LFT, amylase/lipase",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor orders or explicitly references at least 2 of: HbA1c, lipid panel, LFT, amylase/lipase, KFT/RFT, TSH \u2014 either as pre-treatment baseline or as a monitoring panel.",
+            "no_rule":  "NO if fewer than 2 named, OR only one ('pancreatic profile' alone counts as 1).",
+            "na_rule":  "NA iff consult_type is follow_up AND no new labs are clinically indicated (a routine titration follow-up). Baseline labs are applicable at initiation OR whenever clinically indicated \u2014 so if the transcript shows a clinical trigger for labs on the follow-up (new symptoms, abnormal prior results, a dose change requiring monitoring), the item remains applicable and is NOT NA. See scoring.consult_type_detection.",
+            "examples": {
+              "yes": "\u201CBefore starting, do HbA1c, lipid panel, LFT, KFT.\u201D",
+              "no":  "\u201CGet a pancreatic profile in 3 months.\u201D (1 lab).",
+              "na":  "Routine follow-up consult with no new clinical indication for labs."
+            }
+          },
+          {
+            "id": "followup_schedule",
+            "item": "Follow-up schedule: 4 weeks, 3 months, 6 months",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor arranges a future touchpoint with a specific timeframe (in weeks or months). The follow-up intent may be phrased in any equivalent way \u2014 'follow-up', 'review', 'reconnect', 'update me', 'next visit', 'check in', 'see you', 'come back', 'monitoring', etc. \u2014 so long as a specific timeframe is attached.",
+            "no_rule":  "NO if no specific timeframe is given (vague \u2018follow up later\u2019 / \u2018come back if needed\u2019 does NOT count).",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CFollow up after 1 month\u201D OR \u201Clet\u2019s review in 3 months\u201D OR \u201Creconnect in 4 weeks\u201D OR \u201Cupdate me in 2 weeks\u201D OR \u201Cnext visit in a month.\u201D",
+              "no":  "\u201CCome back if needed.\u201D (no timeframe)."
+            }
+          },
+          {
+            "id": "escalation_path",
+            "item": "Clear escalation path if adverse events occur",
+            "tier": "MUST", "tier_weight": 10,
+            "yes_rule": "YES iff the doctor explains specifically what to do or who to contact if a defined adverse event occurs \u2014 must include both a SYMPTOM trigger AND an ACTION. Match both by synonym, not exact keyword. SYMPTOM triggers include 'severe abdominal pain', 'persistent vomiting', severe hypoglycemia signs, severe allergic reaction, etc. ACTIONs include 'go to hospital', 'seek immediate medical care', 'go to the ER', 'stop the drug and call us', etc. (e.g., 'severe abdominal pain \u2192 stop drug, go to ER').",
+            "no_rule":  "NO if guidance is generic (e.g., 'contact nearby hospital' with no symptom trigger), OR symptom and action are not paired.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CIf you feel dizzy or blurred vision, eat chocolate or biscuit immediately.\u201D OR \u201CSevere abdominal pain or persistent vomiting \u2192 stop the drug and seek immediate medical care / go to hospital.\u201D",
+              "no":  "\u201CContact medical doctor if any problem.\u201D"
+            }
+          },
+          {
+            "id": "metrics_to_track",
+            "item": "What metrics to track: weight, waist, energy, mood",
+            "tier": "SHOULD", "tier_weight": 6,
+            "yes_rule": "YES iff the doctor names at least 2 metrics for the patient to self-track \u2014 weight, waist circumference, energy level, mood, blood sugar, blood pressure, etc.",
+            "no_rule":  "NO if fewer than 2 named.",
+            "na_rule":  "Never NA.",
+            "examples": {
+              "yes": "\u201CTrack weight weekly and waist monthly.\u201D",
+              "no":  "\u201CKeep an eye on your weight.\u201D (1 metric)."
+            }
+          }
+        ]
+      }
+    ],
+
+    "bonus_counseling_quality": {
+      "purpose": "8 counseling-quality items from the original chat-message guiding principles. NOT scored \u2014 they do NOT change the /100 composite. They are tracked in the Excel for visibility and coaching only. Same YES rule format as the rubric items. Tier weight is set to 0 to make non-scoring explicit.",
+      "scoring_impact": "none",
+      "items": [
+        {
+          "id": "drug_choice_rationale",
+          "name": "Drug choice rationale (semaglutide vs tirzepatide vs liraglutide)",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor explicitly compares at least 2 GLP-1 molecules (semaglutide, tirzepatide, liraglutide) AND explains the reason for choosing the prescribed molecule for THIS patient.",
+          "no_rule":  "NO if no comparison, or only one molecule named.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "storage_and_injection",
+          "name": "Storage & injection technique",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor covers at least 2 of: refrigeration / storage temperature, pen technique, rotation of injection sites.",
+          "no_rule":  "NO if fewer than 2 covered.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "fatty_liver_nash",
+          "name": "Fatty liver / NASH",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor asks about fatty liver / NASH, OR LFT status, OR explicitly discusses GLP-1 benefit for liver disease.",
+          "no_rule":  "NO if not asked or discussed.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "cost_and_adherence",
+          "name": "Cost & adherence plan",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor discusses monthly cost, affordability, OR long-term sustainability of GLP-1 therapy in financial terms.",
+          "no_rule":  "NO if not discussed even when patient raises cost.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "injection_anxiety",
+          "name": "Injection anxiety / needle phobia",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor asks about needle phobia or injection anxiety, OR addresses it proactively (e.g., 'first shot in clinic if you're nervous').",
+          "no_rule":  "NO if not addressed.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "realistic_expectations",
+          "name": "Realistic weight-loss expectations",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor states a SPECIFIC weight-loss percentage range (e.g., 5\u201315%) AND a time horizon (months).",
+          "no_rule":  "NO if no range AND/OR no time horizon.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "plateaus",
+          "name": "Plateau guidance",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor pre-warns the patient about weight plateaus (typical at months 4\u20136 or 8\u201312) AND offers strategy.",
+          "no_rule":  "NO if not pre-warned.",
+          "na_rule":  "Never NA."
+        },
+        {
+          "id": "patient_goals",
+          "name": "Patient goals \u2014 what does success look like",
+          "tier": "BONUS", "tier_weight": 0,
+          "yes_rule": "YES iff the doctor asks an open-ended question about what success looks like to the patient (qualitative, not just kilos).",
+          "no_rule":  "NO if not asked, OR only weight number is asked.",
+          "na_rule":  "Never NA."
+        }
+      ]
+    }
+  },
+
+  "doctor_name_extraction": {
+    "purpose": "Doctor name is parsed from the source filename, NOT from the transcript prose, because Deepgram regularly mis-transcribes proper nouns (especially Indian names).",
+    "filename_pattern": "Copy of <DOCTOR_NAME>(\\.+)?\\.mpeg",
+    "rule": "Strip the 'Copy of ' prefix and the '.mpeg' suffix. Strip any trailing dots. The remainder is the canonical doctor name.",
+    "examples": [
+      { "filename": "Copy of Dr Duggirala..mpeg",   "doctor_name": "Dr Duggirala" },
+      { "filename": "Copy of Dr Duggirala.mpeg",    "doctor_name": "Dr Duggirala" },
+      { "filename": "Copy of Dr Yallala Anil..mpeg","doctor_name": "Dr Yallala Anil" },
+      { "filename": "Copy of Dr jitendra.mpeg",     "doctor_name": "Dr jitendra" }
+    ]
+  },
+
+  "call_timestamp": {
+    "purpose": "Unique identifier per call. Combined with Doctor name, uniquely identifies a row when one doctor has multiple calls.",
+    "source": "Deepgram metadata.created field (ISO 8601, UTC).",
+    "format_in_excel": "YYYY-MM-DD HH:MM:SS UTC"
+  }
+}

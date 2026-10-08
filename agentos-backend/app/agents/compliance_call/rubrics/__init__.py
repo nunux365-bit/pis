@@ -1,0 +1,1 @@
+"""Versioned rubric JSON fixtures."""

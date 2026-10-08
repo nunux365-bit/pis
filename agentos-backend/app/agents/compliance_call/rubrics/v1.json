@@ -1,0 +1,27 @@
+{
+  "version": "1",
+  "title": "Compliance call rubric (v1 seed)",
+  "domains": [
+    {
+      "id": "communication",
+      "label": "Communication",
+      "items": [
+        {
+          "id": "greeting",
+          "label": "Professional greeting and introduction",
+          "weight": 1.0
+        },
+        {
+          "id": "clarity",
+          "label": "Clear explanation of purpose and next steps",
+          "weight": 1.0
+        },
+        {
+          "id": "empathy",
+          "label": "Appropriate empathy / active listening cues",
+          "weight": 0.8
+        }
+      ]
+    }
+  ]
+}
