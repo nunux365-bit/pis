@@ -1,0 +1,9 @@
+{
+  "chat_id": "chat-fixture-001",
+  "messages": [
+    {"role": "user", "content": "Where is my order PO13326295207344?", "created_at": "2026-05-18T10:00:00Z"},
+    {"role": "assistant", "content": "Your order has been delivered on 17 May.", "created_at": "2026-05-18T10:00:05Z"},
+    {"role": "user", "content": "Thank you", "created_at": "2026-05-18T10:00:20Z"}
+  ],
+  "metadata": {"channel": "app"}
+}

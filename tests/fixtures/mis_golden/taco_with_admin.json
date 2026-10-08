@@ -1,0 +1,52 @@
+{
+  "mis_summary": {
+    "client_site_key": "golden_taco_chakan_demo",
+    "billing_period_start": "2026-02-01",
+    "billing_period_end": "2026-02-28",
+    "working_days": 20
+  },
+  "summary_rows": [
+    {
+      "contract_rate_line_id": "22222222-2222-4222-8222-222222222201",
+      "employee_external_id": "TACO-GOLD-FMO-01",
+      "employee_name": "Golden FMO",
+      "service": "FMO_MBBS_AFIH",
+      "role_code": "FMO_MBBS_AFIH",
+      "contracted_rate": 19285.71,
+      "contracted_count": 1,
+      "present_days": 20,
+      "absent_days": 0,
+      "final_amount": 19285.71,
+      "comments": null,
+      "is_omitted": false,
+      "omit_reason": null,
+      "calc_notes": "fixture: equal split illustrative"
+    },
+    {
+      "contract_rate_line_id": "22222222-2222-4222-8222-222222222299",
+      "employee_external_id": null,
+      "employee_name": null,
+      "service": "OHC_ADMIN_INVOICE_PCT",
+      "role_code": "OHC_ADMIN_INVOICE_PCT",
+      "contracted_rate": 0.0,
+      "contracted_count": 1,
+      "present_days": 0,
+      "absent_days": 0,
+      "final_amount": 1928.57,
+      "comments": null,
+      "is_omitted": false,
+      "omit_reason": null,
+      "calc_notes": "10% of staffing base (fixture)"
+    }
+  ],
+  "totals": {
+    "final_amount_total": 21214.28,
+    "rows_included": 2,
+    "rows_omitted": 0
+  },
+  "validation": {
+    "status": "ok",
+    "validation_errors": [],
+    "self_checks": []
+  }
+}

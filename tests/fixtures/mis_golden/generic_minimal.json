@@ -1,0 +1,36 @@
+{
+  "mis_summary": {
+    "client_site_key": "golden_generic_client_a",
+    "billing_period_start": "2026-01-01",
+    "billing_period_end": "2026-01-31",
+    "working_days": 23
+  },
+  "summary_rows": [
+    {
+      "contract_rate_line_id": "33333333-3333-4333-8333-333333333301",
+      "employee_external_id": null,
+      "employee_name": null,
+      "service": "BMW_DISPOSAL",
+      "role_code": "BMW_DISPOSAL",
+      "contracted_rate": 15000.0,
+      "contracted_count": 1,
+      "present_days": 0,
+      "absent_days": 0,
+      "final_amount": 15000.0,
+      "comments": "Cap / schedule when actuals missing (fixture)",
+      "is_omitted": false,
+      "omit_reason": null,
+      "calc_notes": "as_per_actuals fallback per contract text (fixture)"
+    }
+  ],
+  "totals": {
+    "final_amount_total": 15000.0,
+    "rows_included": 1,
+    "rows_omitted": 0
+  },
+  "validation": {
+    "status": "needs_human_review",
+    "validation_errors": ["fixture: generic ambiguous case flagged"],
+    "self_checks": []
+  }
+}
