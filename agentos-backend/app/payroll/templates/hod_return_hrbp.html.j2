@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333; max-width: 600px; margin: 0 auto;">
+<div style="background: #fff3cd; border-radius: 8px; padding: 24px; margin: 16px 0; border-left: 4px solid #ffc107; border-right: 1px solid #ffeeba; border-top: 1px solid #ffeeba; border-bottom: 1px solid #ffeeba;">
+
+<h2 style="color: #856404; margin-top: 0;">⚠️ Sheet Returned by HOD for Re-Review</h2>
+
+<p>Dear HRBP Reviewer,</p>
+
+<p>
+The input sheet for <strong>{{ module }}</strong> ({{ employee_home }}) has been returned to you by the Head of Department (HOD) for re-review.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold; width: 40%;">Earning Head</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ module }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Employee Home</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ employee_home }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Returned By (HOD)</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ hod_name }} ({{ hod_email }})</td></tr>
+</table>
+
+{% if comments %}
+<div style="margin-top: 20px; background: #ffffff; border: 1px solid #ffeeba; border-radius: 6px; padding: 16px;">
+  <h4 style="color: #856404; margin-top: 0; margin-bottom: 8px;">💬 HOD Feedback / Reason</h4>
+  <p style="margin: 0; font-style: italic;">"{{ comments }}"</p>
+</div>
+{% endif %}
+
+<p style="margin-top: 24px; color: #666; font-size: 12px;">This is an automated notification from the PIS Workflow System.</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+{
+  "source": "Tax Code List.xlsx \u2014 Decoded Tax Codes (procurement picker allowlist)",
+  "codes": [
+    "1A",
+    "1B",
+    "FA",
+    "FB",
+    "FD",
+    "FE",
+    "FG",
+    "FH",
+    "FJ",
+    "FK",
+    "FP",
+    "FQ",
+    "FR",
+    "FS",
+    "FU",
+    "FV",
+    "HA",
+    "HB",
+    "HD",
+    "HE",
+    "HG",
+    "HH",
+    "HJ",
+    "HK",
+    "HP",
+    "HQ",
+    "HR",
+    "HS",
+    "HU",
+    "HV",
+    "IM",
+    "IN",
+    "V0",
+    "WA",
+    "WB",
+    "WG",
+    "WH",
+    "XA",
+    "XB",
+    "XG",
+    "XH"
+  ],
+  "rows": [
+    {
+      "code": "1A",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 1
+    },
+    {
+      "code": "1B",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 2
+    },
+    {
+      "code": "FA",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 3
+    },
+    {
+      "code": "FB",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 4
+    },
+    {
+      "code": "FD",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 5
+    },
+    {
+      "code": "FE",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 6
+    },
+    {
+      "code": "FG",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 7
+    },
+    {
+      "code": "FH",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 8
+    },
+    {
+      "code": "FJ",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 9
+    },
+    {
+      "code": "FK",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 10
+    },
+    {
+      "code": "FP",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 11
+    },
+    {
+      "code": "FQ",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 12
+    },
+    {
+      "code": "FR",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 13
+    },
+    {
+      "code": "FS",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 14
+    },
+    {
+      "code": "FU",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 15
+    },
+    {
+      "code": "FV",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 16
+    },
+    {
+      "code": "HA",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 17
+    },
+    {
+      "code": "HB",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 18
+    },
+    {
+      "code": "HD",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 19
+    },
+    {
+      "code": "HE",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 20
+    },
+    {
+      "code": "HG",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 21
+    },
+    {
+      "code": "HH",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 22
+    },
+    {
+      "code": "HJ",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 23
+    },
+    {
+      "code": "HK",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 24
+    },
+    {
+      "code": "HP",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 25
+    },
+    {
+      "code": "HQ",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 26
+    },
+    {
+      "code": "HR",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 27
+    },
+    {
+      "code": "HS",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 28
+    },
+    {
+      "code": "HU",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 29
+    },
+    {
+      "code": "HV",
+      "use_in_pr_po": "ISD entity only",
+      "sort_order": 30
+    },
+    {
+      "code": "IM",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 31
+    },
+    {
+      "code": "IN",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 32
+    },
+    {
+      "code": "V0",
+      "use_in_pr_po": "YES \u2014 standard PO",
+      "sort_order": 33
+    },
+    {
+      "code": "WA",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 34
+    },
+    {
+      "code": "WB",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 35
+    },
+    {
+      "code": "WG",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 36
+    },
+    {
+      "code": "WH",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 37
+    },
+    {
+      "code": "XA",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 38
+    },
+    {
+      "code": "XB",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 39
+    },
+    {
+      "code": "XG",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 40
+    },
+    {
+      "code": "XH",
+      "use_in_pr_po": "Advance payment only",
+      "sort_order": 41
+    }
+  ]
+}

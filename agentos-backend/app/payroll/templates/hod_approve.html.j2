@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333; max-width: 600px; margin: 0 auto;">
+<div style="background: #d4edda; border-radius: 8px; padding: 24px; margin: 16px 0; border-left: 4px solid #28a745; border-right: 1px solid #c3e6cb; border-top: 1px solid #c3e6cb; border-bottom: 1px solid #c3e6cb;">
+
+<h2 style="color: #155724; margin-top: 0;">✅ HOD Approved — Ready for Payroll Processing</h2>
+
+<p>Dear Payroll Team,</p>
+
+<p>
+The below input sheet has received all mandatory approvals and is now ready for final payroll processing.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold; width: 40%;">Earning Head</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ module }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Employee Home</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ employee_home }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Approved By (HOD)</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ hod_name }} ({{ hod_email }})</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Originally Submitted By</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ maker_name }}</td></tr>
+</table>
+
+{% if comments %}
+<div style="margin-top: 20px; background: #fffdf5; border: 1px solid #ffeeba; border-radius: 6px; padding: 16px;">
+  <h4 style="color: #856404; margin-top: 0; margin-bottom: 8px;">💬 Comments</h4>
+  <p style="margin: 0; font-style: italic;">"{{ comments }}"</p>
+</div>
+{% endif %}
+
+<p style="margin-top: 24px; color: #666; font-size: 12px;">This is an automated notification from the PIS Workflow System.</p>
+
+</div>
+</body>
+</html>

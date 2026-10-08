@@ -1,0 +1,5547 @@
+{
+  "version": 1,
+  "description": "Non-SAP procurement reference master. Load after SAP sync.",
+  "rows": [
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "A",
+      "label": "Asset",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "B",
+      "label": "MTS prod./sales ord.",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "C",
+      "label": "Sales order",
+      "sort_order": 2,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "D",
+      "label": "Indiv.cust./project",
+      "sort_order": 3,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "E",
+      "label": "Ind. cust. w. KD-CO",
+      "sort_order": 4,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "F",
+      "label": "Order",
+      "sort_order": 5,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "G",
+      "label": "MTS prod./project",
+      "sort_order": 6,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "K",
+      "label": "Cost center",
+      "sort_order": 7,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M",
+      "label": "Ind. cust. w/o KD-CO",
+      "sort_order": 8,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "N",
+      "label": "Network",
+      "sort_order": 9,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "P",
+      "label": "Project",
+      "sort_order": 10,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Q",
+      "label": "Proj. make-to-order",
+      "sort_order": 11,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "T",
+      "label": "All new aux.acc.ass.",
+      "sort_order": 12,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "U",
+      "label": "Unknown",
+      "sort_order": 13,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "X",
+      "label": "All aux.acct.assgts.",
+      "sort_order": 14,
+      "extra": null
+    },
+    {
+      "domain": "account_assignment_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Z",
+      "label": "Returnable Packaging",
+      "sort_order": 15,
+      "extra": null
+    },
+    {
+      "domain": "company_code",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1MGH",
+      "label": "1mg Healthcare",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "company_code",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1MGT",
+      "label": "1mg Technologies",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "company_code",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1LFS",
+      "label": "1mg Lifesciences",
+      "sort_order": 2,
+      "extra": null
+    },
+    {
+      "domain": "currency",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "INR",
+      "label": "INR",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "item_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "",
+      "label": "Standard",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "item_category",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "D",
+      "label": "Service",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "%",
+      "label": "%",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "%O",
+      "label": "%O",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ONE",
+      "label": "ONE",
+      "sort_order": 2,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "D",
+      "label": "D",
+      "sort_order": 3,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "22S",
+      "label": "22S",
+      "sort_order": 4,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CMS",
+      "label": "CMS",
+      "sort_order": 5,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "000",
+      "label": "000",
+      "sort_order": 6,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µL",
+      "label": "µL",
+      "sort_order": 7,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µF",
+      "label": "µF",
+      "sort_order": 8,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PF",
+      "label": "PF",
+      "sort_order": 9,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "A",
+      "label": "A",
+      "sort_order": 10,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GOH",
+      "label": "GOH",
+      "sort_order": 11,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GM3",
+      "label": "GM3",
+      "sort_order": 12,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ACR",
+      "label": "ACR",
+      "sort_order": 13,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KD3",
+      "label": "KD3",
+      "sort_order": 14,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KML",
+      "label": "KML",
+      "sort_order": 15,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NI",
+      "label": "NI",
+      "sort_order": 16,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MN",
+      "label": "MN",
+      "sort_order": 17,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGO",
+      "label": "MGO",
+      "sort_order": 18,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MHV",
+      "label": "MHV",
+      "sort_order": 19,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µA",
+      "label": "µA",
+      "sort_order": 20,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BAG",
+      "label": "BAG",
+      "sort_order": 21,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BAR",
+      "label": "BAR",
+      "sort_order": 22,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BT",
+      "label": "BT",
+      "sort_order": 23,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BQK",
+      "label": "BQK",
+      "sort_order": 24,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BTU",
+      "label": "BTU",
+      "sort_order": 25,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Bqm",
+      "label": "Bqm",
+      "sort_order": 26,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "RF",
+      "label": "RF",
+      "sort_order": 27,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M/M",
+      "label": "M/M",
+      "sort_order": 28,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M/L",
+      "label": "M/L",
+      "sort_order": 29,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NA",
+      "label": "NA",
+      "sort_order": 30,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "C3S",
+      "label": "C3S",
+      "sort_order": 31,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "R-U",
+      "label": "R-U",
+      "sort_order": 32,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NMM",
+      "label": "NMM",
+      "sort_order": 33,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CCK",
+      "label": "CCK",
+      "sort_order": 34,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CCM",
+      "label": "CCM",
+      "sort_order": 35,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CD",
+      "label": "CD",
+      "sort_order": 36,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CD3",
+      "label": "CD3",
+      "sort_order": 37,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CM",
+      "label": "CM",
+      "sort_order": 38,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CM2",
+      "label": "CM2",
+      "sort_order": 39,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CMH",
+      "label": "CMH",
+      "sort_order": 40,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "COP",
+      "label": "COP",
+      "sort_order": 41,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CV",
+      "label": "CV",
+      "sort_order": 42,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CL",
+      "label": "CL",
+      "sort_order": 43,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "S/M",
+      "label": "S/M",
+      "sort_order": 44,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TOM",
+      "label": "TOM",
+      "sort_order": 45,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "VAM",
+      "label": "VAM",
+      "sort_order": 46,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "dBA",
+      "label": "dBA",
+      "sort_order": 47,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "dBC",
+      "label": "dBC",
+      "sort_order": 48,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DEG",
+      "label": "DEG",
+      "sort_order": 49,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DGP",
+      "label": "DGP",
+      "sort_order": 50,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DM",
+      "label": "DM",
+      "sort_order": 51,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DR",
+      "label": "DR",
+      "sort_order": 52,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DZ",
+      "label": "DZ",
+      "sort_order": 53,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "EA",
+      "label": "EA",
+      "sort_order": 54,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "EU",
+      "label": "EU",
+      "sort_order": 55,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "EML",
+      "label": "EML",
+      "sort_order": 56,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "F",
+      "label": "F",
+      "sort_order": 57,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "°F",
+      "label": "°F",
+      "sort_order": 58,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "FT",
+      "label": "FT",
+      "sort_order": 59,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "FT2",
+      "label": "FT2",
+      "sort_order": 60,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "FT3",
+      "label": "FT3",
+      "sort_order": 61,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "G",
+      "label": "G",
+      "sort_order": 62,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "G/L",
+      "label": "G/L",
+      "sort_order": 63,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GAU",
+      "label": "GAU",
+      "sort_order": 64,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "°C",
+      "label": "°C",
+      "sort_order": 65,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GHG",
+      "label": "GHG",
+      "sort_order": 66,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GJ",
+      "label": "GJ",
+      "sort_order": 67,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GJT",
+      "label": "GJT",
+      "sort_order": 68,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GKG",
+      "label": "GKG",
+      "sort_order": 69,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GLI",
+      "label": "GLI",
+      "sort_order": 70,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GAL",
+      "label": "GAL",
+      "sort_order": 71,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GPM",
+      "label": "GPM",
+      "sort_order": 72,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GM",
+      "label": "GM",
+      "sort_order": 73,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GM2",
+      "label": "GM2",
+      "sort_order": 74,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GPH",
+      "label": "GPH",
+      "sort_order": 75,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µGQ",
+      "label": "µGQ",
+      "sort_order": 76,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GRO",
+      "label": "GRO",
+      "sort_order": 77,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GT",
+      "label": "GT",
+      "sort_order": 78,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GAI",
+      "label": "GAI",
+      "sort_order": 79,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "H",
+      "label": "H",
+      "sort_order": 80,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "HA",
+      "label": "HA",
+      "sort_order": 81,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "HL",
+      "label": "HL",
+      "sort_order": 82,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "HPA",
+      "label": "HPA",
+      "sort_order": 83,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "HZ",
+      "label": "HZ",
+      "sort_order": 84,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "2",
+      "label": "2",
+      "sort_order": 85,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "3",
+      "label": "3",
+      "sort_order": 86,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "J",
+      "label": "J",
+      "sort_order": 87,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YR",
+      "label": "YR",
+      "sort_order": 88,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "JKG",
+      "label": "JKG",
+      "sort_order": 89,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "JKK",
+      "label": "JKK",
+      "sort_order": 90,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "JMO",
+      "label": "JMO",
+      "sort_order": 91,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "K",
+      "label": "K",
+      "sort_order": 92,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KA",
+      "label": "KA",
+      "sort_order": 93,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CAN",
+      "label": "CAN",
+      "sort_order": 94,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CAR",
+      "label": "CAR",
+      "sort_order": 95,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KBK",
+      "label": "KBK",
+      "sort_order": 96,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KG",
+      "label": "KG",
+      "sort_order": 97,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGF",
+      "label": "KGF",
+      "sort_order": 98,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGH",
+      "label": "KGH",
+      "sort_order": 99,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGK",
+      "label": "KGK",
+      "sort_order": 100,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGM",
+      "label": "KGM",
+      "sort_order": 101,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGS",
+      "label": "KGS",
+      "sort_order": 102,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGT",
+      "label": "KGT",
+      "sort_order": 103,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KGV",
+      "label": "KGV",
+      "sort_order": 104,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KAI",
+      "label": "KAI",
+      "sort_order": 105,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KHZ",
+      "label": "KHZ",
+      "sort_order": 106,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CRT",
+      "label": "CRT",
+      "sort_order": 107,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KJ",
+      "label": "KJ",
+      "sort_order": 108,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KJK",
+      "label": "KJK",
+      "sort_order": 109,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KJM",
+      "label": "KJM",
+      "sort_order": 110,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KM",
+      "label": "KM",
+      "sort_order": 111,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KM2",
+      "label": "KM2",
+      "sort_order": 112,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KMH",
+      "label": "KMH",
+      "sort_order": 113,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KMK",
+      "label": "KMK",
+      "sort_order": 114,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KMN",
+      "label": "KMN",
+      "sort_order": 115,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KMS",
+      "label": "KMS",
+      "sort_order": 116,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KOH",
+      "label": "KOH",
+      "sort_order": 117,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KPA",
+      "label": "KPA",
+      "sort_order": 118,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KT",
+      "label": "KT",
+      "sort_order": 119,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KV",
+      "label": "KV",
+      "sort_order": 120,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KVA",
+      "label": "KVA",
+      "sort_order": 121,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KW",
+      "label": "KW",
+      "sort_order": 122,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KWH",
+      "label": "KWH",
+      "sort_order": 123,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KIK",
+      "label": "KIK",
+      "sort_order": 124,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "KWM",
+      "label": "KWM",
+      "sort_order": 125,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "L",
+      "label": "L",
+      "sort_order": 126,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LMI",
+      "label": "LMI",
+      "sort_order": 127,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LB",
+      "label": "LB",
+      "sort_order": 128,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbY",
+      "label": "lbY",
+      "sort_order": 129,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbM",
+      "label": "lbM",
+      "sort_order": 130,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "AU",
+      "label": "AU",
+      "sort_order": 131,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LHK",
+      "label": "LHK",
+      "sort_order": 132,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "002",
+      "label": "002",
+      "sort_order": 133,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LMS",
+      "label": "LMS",
+      "sort_order": 134,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LPH",
+      "label": "LPH",
+      "sort_order": 135,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M",
+      "label": "M",
+      "sort_order": 136,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M%",
+      "label": "M%",
+      "sort_order": 137,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M%O",
+      "label": "M%O",
+      "sort_order": 138,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M/S",
+      "label": "M/S",
+      "sort_order": 139,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M2",
+      "label": "M2",
+      "sort_order": 140,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M-2",
+      "label": "M-2",
+      "sort_order": 141,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M2S",
+      "label": "M2S",
+      "sort_order": 142,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M3",
+      "label": "M3",
+      "sort_order": 143,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M3D",
+      "label": "M3D",
+      "sort_order": 144,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M3S",
+      "label": "M3S",
+      "sort_order": 145,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MA",
+      "label": "MA",
+      "sort_order": 146,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MBA",
+      "label": "MBA",
+      "sort_order": 147,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MBZ",
+      "label": "MBZ",
+      "sort_order": 148,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MEJ",
+      "label": "MEJ",
+      "sort_order": 149,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MG",
+      "label": "MG",
+      "sort_order": 150,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGE",
+      "label": "MGE",
+      "sort_order": 151,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGG",
+      "label": "MGG",
+      "sort_order": 152,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGJ",
+      "label": "MGJ",
+      "sort_order": 153,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGK",
+      "label": "MGK",
+      "sort_order": 154,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGL",
+      "label": "MGL",
+      "sort_order": 155,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGQ",
+      "label": "MGQ",
+      "sort_order": 156,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGT",
+      "label": "MGT",
+      "sort_order": 157,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGW",
+      "label": "MGW",
+      "sort_order": 158,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MGq",
+      "label": "MGq",
+      "sort_order": 159,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MHZ",
+      "label": "MHZ",
+      "sort_order": 160,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MI",
+      "label": "MI",
+      "sort_order": 161,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MI2",
+      "label": "MI2",
+      "sort_order": 162,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µM",
+      "label": "µM",
+      "sort_order": 163,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MIN",
+      "label": "MIN",
+      "sort_order": 164,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MIS",
+      "label": "MIS",
+      "sort_order": 165,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MIJ",
+      "label": "MIJ",
+      "sort_order": 166,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MJK",
+      "label": "MJK",
+      "sort_order": 167,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ML",
+      "label": "ML",
+      "sort_order": 168,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MLK",
+      "label": "MLK",
+      "sort_order": 169,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MLI",
+      "label": "MLI",
+      "sort_order": 170,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MM",
+      "label": "MM",
+      "sort_order": 171,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MM2",
+      "label": "MM2",
+      "sort_order": 172,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMA",
+      "label": "MMA",
+      "sort_order": 173,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMG",
+      "label": "MMG",
+      "sort_order": 174,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMH",
+      "label": "MMH",
+      "sort_order": 175,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMK",
+      "label": "MMK",
+      "sort_order": 176,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMO",
+      "label": "MMO",
+      "sort_order": 177,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MM3",
+      "label": "MM3",
+      "sort_order": 178,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MMS",
+      "label": "MMS",
+      "sort_order": 179,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MNM",
+      "label": "MNM",
+      "sort_order": 180,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MOK",
+      "label": "MOK",
+      "sort_order": 181,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MOL",
+      "label": "MOL",
+      "sort_order": 182,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MON",
+      "label": "MON",
+      "sort_order": 183,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPA",
+      "label": "MPA",
+      "sort_order": 184,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPB",
+      "label": "MPB",
+      "sort_order": 185,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPG",
+      "label": "MPG",
+      "sort_order": 186,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPM",
+      "label": "MPM",
+      "sort_order": 187,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPS",
+      "label": "MPS",
+      "sort_order": 188,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPT",
+      "label": "MPT",
+      "sort_order": 189,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPZ",
+      "label": "MPZ",
+      "sort_order": 190,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M3H",
+      "label": "M3H",
+      "sort_order": 191,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MSE",
+      "label": "MSE",
+      "sort_order": 192,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MS2",
+      "label": "MS2",
+      "sort_order": 193,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MTE",
+      "label": "MTE",
+      "sort_order": 194,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MTM",
+      "label": "MTM",
+      "sort_order": 195,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "M/H",
+      "label": "M/H",
+      "sort_order": 196,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MTf",
+      "label": "MTf",
+      "sort_order": 197,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MV",
+      "label": "MV",
+      "sort_order": 198,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MVA",
+      "label": "MVA",
+      "sort_order": 199,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MW",
+      "label": "MW",
+      "sort_order": 200,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MWH",
+      "label": "MWH",
+      "sort_order": 201,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "N",
+      "label": "N",
+      "sort_order": 202,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NAM",
+      "label": "NAM",
+      "sort_order": 203,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NGT",
+      "label": "NGT",
+      "sort_order": 204,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NM",
+      "label": "NM",
+      "sort_order": 205,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NOS",
+      "label": "NOS",
+      "sort_order": 206,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NS",
+      "label": "NS",
+      "sort_order": 207,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "OCM",
+      "label": "OCM",
+      "sort_order": 208,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "OHM",
+      "label": "OHM",
+      "sort_order": 209,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "OM",
+      "label": "OM",
+      "sort_order": 210,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "OZ",
+      "label": "OZ",
+      "sort_order": 211,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "FOZ",
+      "label": "FOZ",
+      "sort_order": 212,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "P",
+      "label": "P",
+      "sort_order": 213,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PA",
+      "label": "PA",
+      "sort_order": 214,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PAA",
+      "label": "PAA",
+      "sort_order": 215,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PAC",
+      "label": "PAC",
+      "sort_order": 216,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PAL",
+      "label": "PAL",
+      "sort_order": 217,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PAS",
+      "label": "PAS",
+      "sort_order": 218,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PRC",
+      "label": "PRC",
+      "sort_order": 219,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PDA",
+      "label": "PDA",
+      "sort_order": 220,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PMI",
+      "label": "PMI",
+      "sort_order": 221,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PMR",
+      "label": "PMR",
+      "sort_order": 222,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PPB",
+      "label": "PPB",
+      "sort_order": 223,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PPM",
+      "label": "PPM",
+      "sort_order": 224,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PPT",
+      "label": "PPT",
+      "sort_order": 225,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PRM",
+      "label": "PRM",
+      "sort_order": 226,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PRS",
+      "label": "PRS",
+      "sort_order": 227,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PS",
+      "label": "PS",
+      "sort_order": 228,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PSI",
+      "label": "PSI",
+      "sort_order": 229,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PT",
+      "label": "PT",
+      "sort_order": 230,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "QT",
+      "label": "QT",
+      "sort_order": 231,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "RHO",
+      "label": "RHO",
+      "sort_order": 232,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ROL",
+      "label": "ROL",
+      "sort_order": 233,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "S",
+      "label": "S",
+      "sort_order": 234,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "PC",
+      "label": "PC",
+      "sort_order": 235,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "HR",
+      "label": "HR",
+      "sort_order": 236,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DAY",
+      "label": "DAY",
+      "sort_order": 237,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TC3",
+      "label": "TC3",
+      "sort_order": 238,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TCM",
+      "label": "TCM",
+      "sort_order": 239,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TES",
+      "label": "TES",
+      "sort_order": 240,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TEU",
+      "label": "TEU",
+      "sort_order": 241,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TS",
+      "label": "TS",
+      "sort_order": 242,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tha",
+      "label": "tha",
+      "sort_order": 243,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TYR",
+      "label": "TYR",
+      "sort_order": 244,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TKT",
+      "label": "TKT",
+      "sort_order": 245,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TM3",
+      "label": "TM3",
+      "sort_order": 246,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TO",
+      "label": "TO",
+      "sort_order": 247,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TON",
+      "label": "TON",
+      "sort_order": 248,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "001",
+      "label": "001",
+      "sort_order": 249,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TMO",
+      "label": "TMO",
+      "sort_order": 250,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "TPH",
+      "label": "TPH",
+      "sort_order": 251,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Tot",
+      "label": "Tot",
+      "sort_order": 252,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "µGL",
+      "label": "µGL",
+      "sort_order": 253,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "V",
+      "label": "V",
+      "sort_order": 254,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "V%",
+      "label": "V%",
+      "sort_order": 255,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "V%O",
+      "label": "V%O",
+      "sort_order": 256,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MSC",
+      "label": "MSC",
+      "sort_order": 257,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "MPL",
+      "label": "MPL",
+      "sort_order": 258,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "VAL",
+      "label": "VAL",
+      "sort_order": 259,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "VPB",
+      "label": "VPB",
+      "sort_order": 260,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "VPM",
+      "label": "VPM",
+      "sort_order": 261,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "VPT",
+      "label": "VPT",
+      "sort_order": 262,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "W",
+      "label": "W",
+      "sort_order": 263,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "WK",
+      "label": "WK",
+      "sort_order": 264,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "WMK",
+      "label": "WMK",
+      "sort_order": 265,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "WKY",
+      "label": "WKY",
+      "sort_order": 266,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YD",
+      "label": "YD",
+      "sort_order": 267,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YD2",
+      "label": "YD2",
+      "sort_order": 268,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YD3",
+      "label": "YD3",
+      "sort_order": 269,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "BYr",
+      "label": "BYr",
+      "sort_order": 270,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Bmo",
+      "label": "Bmo",
+      "sort_order": 271,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "bbl",
+      "label": "bbl",
+      "sort_order": 272,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "bft",
+      "label": "bft",
+      "sort_order": 273,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "bgl",
+      "label": "bgl",
+      "sort_order": 274,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "bsc",
+      "label": "bsc",
+      "sort_order": 275,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "btl",
+      "label": "btl",
+      "sort_order": 276,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "fcm",
+      "label": "fcm",
+      "sort_order": 277,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "fm3",
+      "label": "fm3",
+      "sort_order": 278,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "fml",
+      "label": "fml",
+      "sort_order": 279,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "gGJ",
+      "label": "gGJ",
+      "sort_order": 280,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "gj3",
+      "label": "gj3",
+      "sort_order": 281,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "gjm",
+      "label": "gjm",
+      "sort_order": 282,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "gjt",
+      "label": "gjt",
+      "sort_order": 283,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "jm3",
+      "label": "jm3",
+      "sort_order": 284,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgb",
+      "label": "kgb",
+      "sort_order": 285,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgg",
+      "label": "kgg",
+      "sort_order": 286,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgj",
+      "label": "kgj",
+      "sort_order": 287,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgm",
+      "label": "kgm",
+      "sort_order": 288,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgs",
+      "label": "kgs",
+      "sort_order": 289,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kgt",
+      "label": "kgt",
+      "sort_order": 290,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kml",
+      "label": "kml",
+      "sort_order": 291,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "kwk",
+      "label": "kwk",
+      "sort_order": 292,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbb",
+      "label": "lbb",
+      "sort_order": 293,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbg",
+      "label": "lbg",
+      "sort_order": 294,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbl",
+      "label": "lbl",
+      "sort_order": 295,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbm",
+      "label": "lbm",
+      "sort_order": 296,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbs",
+      "label": "lbs",
+      "sort_order": 297,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lbt",
+      "label": "lbt",
+      "sort_order": 298,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lcm",
+      "label": "lcm",
+      "sort_order": 299,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lhh",
+      "label": "lhh",
+      "sort_order": 300,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lht",
+      "label": "lht",
+      "sort_order": 301,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lmf",
+      "label": "lmf",
+      "sort_order": 302,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lmg",
+      "label": "lmg",
+      "sort_order": 303,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ltb",
+      "label": "ltb",
+      "sort_order": 304,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ltf",
+      "label": "ltf",
+      "sort_order": 305,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ltg",
+      "label": "ltg",
+      "sort_order": 306,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "lth",
+      "label": "lth",
+      "sort_order": 307,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mGJ",
+      "label": "mGJ",
+      "sort_order": 308,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mHg",
+      "label": "mHg",
+      "sort_order": 309,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbb",
+      "label": "mbb",
+      "sort_order": 310,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbg",
+      "label": "mbg",
+      "sort_order": 311,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbk",
+      "label": "mbk",
+      "sort_order": 312,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbl",
+      "label": "mbl",
+      "sort_order": 313,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbm",
+      "label": "mbm",
+      "sort_order": 314,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbs",
+      "label": "mbs",
+      "sort_order": 315,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mbt",
+      "label": "mbt",
+      "sort_order": 316,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mjm",
+      "label": "mjm",
+      "sort_order": 317,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "uGJ",
+      "label": "uGJ",
+      "sort_order": 318,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "mmB",
+      "label": "mmB",
+      "sort_order": 319,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "nGJ",
+      "label": "nGJ",
+      "sort_order": 320,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "nGQ",
+      "label": "nGQ",
+      "sort_order": 321,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "pGQ",
+      "label": "pGQ",
+      "sort_order": 322,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "sM3",
+      "label": "sM3",
+      "sort_order": 323,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "sMb",
+      "label": "sMb",
+      "sort_order": 324,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "scf",
+      "label": "scf",
+      "sort_order": 325,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "sch",
+      "label": "sch",
+      "sort_order": 326,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "scy",
+      "label": "scy",
+      "sort_order": 327,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tpA",
+      "label": "tpA",
+      "sort_order": 328,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tMb",
+      "label": "tMb",
+      "sort_order": 329,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tMs",
+      "label": "tMs",
+      "sort_order": 330,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tbl",
+      "label": "tbl",
+      "sort_order": 331,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tbt",
+      "label": "tbt",
+      "sort_order": 332,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tgl",
+      "label": "tgl",
+      "sort_order": 333,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "thm",
+      "label": "thm",
+      "sort_order": 334,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tjl",
+      "label": "tjl",
+      "sort_order": 335,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tm3",
+      "label": "tm3",
+      "sort_order": 336,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tMO",
+      "label": "tMO",
+      "sort_order": 337,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tph",
+      "label": "tph",
+      "sort_order": 338,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tot",
+      "label": "tot",
+      "sort_order": 339,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "tt",
+      "label": "tt",
+      "sort_order": 340,
+      "extra": null
+    },
+    {
+      "domain": "order_unit",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ttj",
+      "label": "ttj",
+      "sort_order": 341,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0001",
+      "label": "0001",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0002",
+      "label": "*We don't need to fill payment term, as it is associated with particular vendor in vendor master",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0003",
+      "label": "0003",
+      "sort_order": 2,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0004",
+      "label": "0004",
+      "sort_order": 3,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0005",
+      "label": "0005",
+      "sort_order": 4,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0006",
+      "label": "0006",
+      "sort_order": 5,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0007",
+      "label": "0007",
+      "sort_order": 7,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0008",
+      "label": "0008",
+      "sort_order": 9,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "0009",
+      "label": "0009",
+      "sort_order": 10,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "G001",
+      "label": "G001",
+      "sort_order": 11,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "G002",
+      "label": "G002",
+      "sort_order": 12,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI01",
+      "label": "GI01",
+      "sort_order": 13,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI02",
+      "label": "GI02",
+      "sort_order": 14,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI03",
+      "label": "GI03",
+      "sort_order": 15,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI04",
+      "label": "GI04",
+      "sort_order": 16,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI05",
+      "label": "GI05",
+      "sort_order": 17,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI06",
+      "label": "GI06",
+      "sort_order": 18,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI07",
+      "label": "GI07",
+      "sort_order": 19,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI08",
+      "label": "GI08",
+      "sort_order": 20,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI09",
+      "label": "GI09",
+      "sort_order": 21,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI10",
+      "label": "GI10",
+      "sort_order": 22,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI11",
+      "label": "GI11",
+      "sort_order": 23,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI12",
+      "label": "GI12",
+      "sort_order": 24,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI13",
+      "label": "GI13",
+      "sort_order": 25,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI14",
+      "label": "GI14",
+      "sort_order": 26,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI15",
+      "label": "GI15",
+      "sort_order": 27,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI16",
+      "label": "GI16",
+      "sort_order": 28,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI17",
+      "label": "GI17",
+      "sort_order": 29,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI18",
+      "label": "GI18",
+      "sort_order": 30,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI19",
+      "label": "GI19",
+      "sort_order": 31,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI23",
+      "label": "GI23",
+      "sort_order": 32,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI24",
+      "label": "GI24",
+      "sort_order": 33,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI25",
+      "label": "GI25",
+      "sort_order": 34,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI26",
+      "label": "GI26",
+      "sort_order": 35,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI27",
+      "label": "GI27",
+      "sort_order": 36,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI28",
+      "label": "GI28",
+      "sort_order": 37,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "GI29",
+      "label": "GI29",
+      "sort_order": 38,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "T001",
+      "label": "T001",
+      "sort_order": 39,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "X001",
+      "label": "X001",
+      "sort_order": 40,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Y001",
+      "label": "Y001",
+      "sort_order": 41,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Y002",
+      "label": "Y002",
+      "sort_order": 42,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "Y1C1",
+      "label": "Y1C1",
+      "sort_order": 43,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI01",
+      "label": "YI01",
+      "sort_order": 44,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI02",
+      "label": "YI02",
+      "sort_order": 45,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI03",
+      "label": "YI03",
+      "sort_order": 46,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI04",
+      "label": "YI04",
+      "sort_order": 47,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI05",
+      "label": "YI05",
+      "sort_order": 48,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI06",
+      "label": "YI06",
+      "sort_order": 49,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI07",
+      "label": "YI07",
+      "sort_order": 50,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI08",
+      "label": "YI08",
+      "sort_order": 51,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI09",
+      "label": "YI09",
+      "sort_order": 52,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI10",
+      "label": "YI10",
+      "sort_order": 53,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI11",
+      "label": "YI11",
+      "sort_order": 54,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI12",
+      "label": "YI12",
+      "sort_order": 55,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI13",
+      "label": "YI13",
+      "sort_order": 56,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI14",
+      "label": "YI14",
+      "sort_order": 57,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI15",
+      "label": "YI15",
+      "sort_order": 58,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI16",
+      "label": "YI16",
+      "sort_order": 59,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI17",
+      "label": "YI17",
+      "sort_order": 60,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI18",
+      "label": "YI18",
+      "sort_order": 61,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI19",
+      "label": "YI19",
+      "sort_order": 62,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI20",
+      "label": "YI20",
+      "sort_order": 63,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI21",
+      "label": "YI21",
+      "sort_order": 64,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI22",
+      "label": "YI22",
+      "sort_order": 65,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI23",
+      "label": "YI23",
+      "sort_order": 66,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI24",
+      "label": "YI24",
+      "sort_order": 67,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI25",
+      "label": "YI25",
+      "sort_order": 68,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI26",
+      "label": "YI26",
+      "sort_order": 69,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI27",
+      "label": "YI27",
+      "sort_order": 70,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI28",
+      "label": "YI28",
+      "sort_order": 71,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI29",
+      "label": "YI29",
+      "sort_order": 72,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI30",
+      "label": "YI30",
+      "sort_order": 73,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI31",
+      "label": "YI31",
+      "sort_order": 74,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI32",
+      "label": "YI32",
+      "sort_order": 75,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI33",
+      "label": "YI33",
+      "sort_order": 76,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI35",
+      "label": "YI35",
+      "sort_order": 77,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI36",
+      "label": "YI36",
+      "sort_order": 78,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI37",
+      "label": "YI37",
+      "sort_order": 79,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI38",
+      "label": "YI38",
+      "sort_order": 80,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI39",
+      "label": "YI39",
+      "sort_order": 81,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI44",
+      "label": "YI44",
+      "sort_order": 82,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI47",
+      "label": "YI47",
+      "sort_order": 83,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI48",
+      "label": "YI48",
+      "sort_order": 84,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI51",
+      "label": "YI51",
+      "sort_order": 85,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI52",
+      "label": "YI52",
+      "sort_order": 86,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI55",
+      "label": "YI55",
+      "sort_order": 87,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI58",
+      "label": "YI58",
+      "sort_order": 88,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI61",
+      "label": "YI61",
+      "sort_order": 89,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI62",
+      "label": "YI62",
+      "sort_order": 90,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI65",
+      "label": "YI65",
+      "sort_order": 91,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI66",
+      "label": "YI66",
+      "sort_order": 92,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI67",
+      "label": "YI67",
+      "sort_order": 93,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI68",
+      "label": "YI68",
+      "sort_order": 94,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI70",
+      "label": "YI70",
+      "sort_order": 95,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI72",
+      "label": "YI72",
+      "sort_order": 96,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI74",
+      "label": "YI74",
+      "sort_order": 97,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI77",
+      "label": "YI77",
+      "sort_order": 98,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI78",
+      "label": "YI78",
+      "sort_order": 99,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI80",
+      "label": "YI80",
+      "sort_order": 100,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI81",
+      "label": "YI81",
+      "sort_order": 101,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI82",
+      "label": "YI82",
+      "sort_order": 102,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI85",
+      "label": "YI85",
+      "sort_order": 103,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI88",
+      "label": "YI88",
+      "sort_order": 104,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI89",
+      "label": "YI89",
+      "sort_order": 105,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI90",
+      "label": "YI90",
+      "sort_order": 106,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI91",
+      "label": "YI91",
+      "sort_order": 107,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YI95",
+      "label": "YI95",
+      "sort_order": 108,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA1",
+      "label": "YIA1",
+      "sort_order": 109,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA2",
+      "label": "YIA2",
+      "sort_order": 110,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA3",
+      "label": "YIA3",
+      "sort_order": 111,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA4",
+      "label": "YIA4",
+      "sort_order": 112,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA5",
+      "label": "YIA5",
+      "sort_order": 113,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA6",
+      "label": "YIA6",
+      "sort_order": 114,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA7",
+      "label": "YIA7",
+      "sort_order": 115,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA8",
+      "label": "YIA8",
+      "sort_order": 116,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIA9",
+      "label": "YIA9",
+      "sort_order": 117,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIB1",
+      "label": "YIB1",
+      "sort_order": 118,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIB2",
+      "label": "YIB2",
+      "sort_order": 119,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC2",
+      "label": "YIC2",
+      "sort_order": 120,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC3",
+      "label": "YIC3",
+      "sort_order": 121,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC4",
+      "label": "YIC4",
+      "sort_order": 122,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC5",
+      "label": "YIC5",
+      "sort_order": 123,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC6",
+      "label": "YIC6",
+      "sort_order": 124,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC7",
+      "label": "YIC7",
+      "sort_order": 125,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC8",
+      "label": "YIC8",
+      "sort_order": 126,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIC9",
+      "label": "YIC9",
+      "sort_order": 127,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID1",
+      "label": "YID1",
+      "sort_order": 128,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID2",
+      "label": "YID2",
+      "sort_order": 129,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID3",
+      "label": "YID3",
+      "sort_order": 130,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID4",
+      "label": "YID4",
+      "sort_order": 131,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID5",
+      "label": "YID5",
+      "sort_order": 132,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID6",
+      "label": "YID6",
+      "sort_order": 133,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID7",
+      "label": "YID7",
+      "sort_order": 134,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID8",
+      "label": "YID8",
+      "sort_order": 135,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YID9",
+      "label": "YID9",
+      "sort_order": 136,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIE1",
+      "label": "YIE1",
+      "sort_order": 137,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIE2",
+      "label": "YIE2",
+      "sort_order": 138,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS01",
+      "label": "YS01",
+      "sort_order": 139,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS02",
+      "label": "YS02",
+      "sort_order": 140,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS03",
+      "label": "YS03",
+      "sort_order": 141,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS04",
+      "label": "YS04",
+      "sort_order": 142,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS05",
+      "label": "YS05",
+      "sort_order": 143,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS06",
+      "label": "YS06",
+      "sort_order": 144,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS07",
+      "label": "YS07",
+      "sort_order": 145,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS08",
+      "label": "YS08",
+      "sort_order": 146,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS09",
+      "label": "YS09",
+      "sort_order": 147,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS10",
+      "label": "YS10",
+      "sort_order": 148,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS11",
+      "label": "YS11",
+      "sort_order": 149,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS12",
+      "label": "YS12",
+      "sort_order": 150,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS13",
+      "label": "YS13",
+      "sort_order": 151,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS14",
+      "label": "YS14",
+      "sort_order": 152,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS15",
+      "label": "YS15",
+      "sort_order": 153,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS16",
+      "label": "YS16",
+      "sort_order": 154,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS17",
+      "label": "YS17",
+      "sort_order": 155,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS18",
+      "label": "YS18",
+      "sort_order": 156,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS19",
+      "label": "YS19",
+      "sort_order": 157,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS20",
+      "label": "YS20",
+      "sort_order": 158,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS21",
+      "label": "YS21",
+      "sort_order": 159,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS22",
+      "label": "YS22",
+      "sort_order": 160,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS23",
+      "label": "YS23",
+      "sort_order": 161,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS24",
+      "label": "YS24",
+      "sort_order": 162,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS25",
+      "label": "YS25",
+      "sort_order": 163,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS26",
+      "label": "YS26",
+      "sort_order": 164,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS27",
+      "label": "YS27",
+      "sort_order": 165,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS28",
+      "label": "YS28",
+      "sort_order": 166,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS29",
+      "label": "YS29",
+      "sort_order": 167,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS32",
+      "label": "YS32",
+      "sort_order": 168,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS36",
+      "label": "YS36",
+      "sort_order": 169,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS37",
+      "label": "YS37",
+      "sort_order": 170,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS38",
+      "label": "YS38",
+      "sort_order": 171,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS44",
+      "label": "YS44",
+      "sort_order": 172,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS47",
+      "label": "YS47",
+      "sort_order": 173,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS48",
+      "label": "YS48",
+      "sort_order": 174,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS51",
+      "label": "YS51",
+      "sort_order": 175,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS52",
+      "label": "YS52",
+      "sort_order": 176,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS55",
+      "label": "YS55",
+      "sort_order": 177,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS58",
+      "label": "YS58",
+      "sort_order": 178,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS61",
+      "label": "YS61",
+      "sort_order": 179,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS65",
+      "label": "YS65",
+      "sort_order": 180,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS70",
+      "label": "YS70",
+      "sort_order": 181,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS72",
+      "label": "YS72",
+      "sort_order": 182,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS80",
+      "label": "YS80",
+      "sort_order": 183,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS89",
+      "label": "YS89",
+      "sort_order": 184,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YS90",
+      "label": "YS90",
+      "sort_order": 185,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YSA3",
+      "label": "YSA3",
+      "sort_order": 186,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YSA6",
+      "label": "YSA6",
+      "sort_order": 187,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YSA8",
+      "label": "YSA8",
+      "sort_order": 188,
+      "extra": null
+    },
+    {
+      "domain": "payment_terms",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YSB1",
+      "label": "YSB1",
+      "sort_order": 189,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "AB",
+      "label": "Request for GP Bid",
+      "sort_order": 0,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "AN",
+      "label": "RFQ",
+      "sort_order": 1,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "CPL",
+      "label": "Stock inquiry",
+      "sort_order": 2,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "DB",
+      "label": "Dummy Purchase Order",
+      "sort_order": 3,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "ENB",
+      "label": "Standard PO DFPS",
+      "sort_order": 4,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "EUB",
+      "label": "DFPS, Int. Ord. Type",
+      "sort_order": 5,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "FO",
+      "label": "Framework Requisn",
+      "sort_order": 6,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "FO",
+      "label": "Framework Order",
+      "sort_order": 7,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LP",
+      "label": "Scheduling Agreement",
+      "sort_order": 8,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LPA",
+      "label": "Scheduling Agreement",
+      "sort_order": 9,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LPXE",
+      "label": "XLO Trnsfr DelySched",
+      "sort_order": 10,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LPXI",
+      "label": "XLO Int. Dely Sched.",
+      "sort_order": 11,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "LU",
+      "label": "St. Trnsp. Sch. Agmt",
+      "sort_order": 12,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "MK",
+      "label": "Quantity Contract",
+      "sort_order": 13,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "MK",
+      "label": "Quantity Contract",
+      "sort_order": 14,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "NB",
+      "label": "Purchase Requisition",
+      "sort_order": 15,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "NB",
+      "label": "Standard PO",
+      "sort_order": 16,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NB2",
+      "label": "Enh. Rets to Vendor",
+      "sort_order": 17,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NB2C",
+      "label": "Enh. Rets STO CC",
+      "sort_order": 18,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NBC7",
+      "label": "CC SiT Enh. Rets STO",
+      "sort_order": 19,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NBR8",
+      "label": "IC SiT Enh. Rets STO",
+      "sort_order": 20,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NBXE",
+      "label": "XLO Inter Com PO",
+      "sort_order": 21,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "NBXI",
+      "label": "XLO Intra Company",
+      "sort_order": 22,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "RAN",
+      "label": "Stock inquiry",
+      "sort_order": 23,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "RE",
+      "label": "External Quotation",
+      "sort_order": 24,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "RE",
+      "label": "Ext. Sourcing Req.",
+      "sort_order": 25,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "RQ",
+      "label": "Quotation",
+      "sort_order": 26,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "RQ",
+      "label": "Request for Quote",
+      "sort_order": 27,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "RV",
+      "label": "Outl. Agmt Requisn",
+      "sort_order": 28,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "UB",
+      "label": "Stock Transp. Order",
+      "sort_order": 29,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "UB2",
+      "label": "Enh. Rets STO IC",
+      "sort_order": 30,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "WK",
+      "label": "Value Contract",
+      "sort_order": 31,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "WK",
+      "label": "Value Contract",
+      "sort_order": 32,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YADO",
+      "label": "Adhoc PO W/O Ref",
+      "sort_order": 33,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "YAST",
+      "label": "Asset/Capital PR",
+      "sort_order": 34,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "YAST",
+      "label": "Asset/Capital PO",
+      "sort_order": 35,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YBLK",
+      "label": "Bulk PO",
+      "sort_order": 36,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "YCON",
+      "label": "Consumables PR",
+      "sort_order": 37,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "YCON",
+      "label": "Consumables PO",
+      "sort_order": 38,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YCOT",
+      "label": "PO W/Ref Contract",
+      "sort_order": 39,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YCRI",
+      "label": "Critical PO",
+      "sort_order": 40,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YCTC",
+      "label": "Inter Company STO",
+      "sort_order": 41,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YFOC",
+      "label": "FOC PO",
+      "sort_order": 42,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YIMP",
+      "label": "Import PO",
+      "sort_order": 43,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YJIT",
+      "label": "Just in Time PO",
+      "sort_order": 44,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YLPA",
+      "label": "Scheduling Agreement",
+      "sort_order": 45,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YMNR",
+      "label": "Material PR",
+      "sort_order": 46,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YPRC",
+      "label": "Price Master LFS",
+      "sort_order": 47,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YPTP",
+      "label": "Intra STO",
+      "sort_order": 48,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YRFA",
+      "label": "Capital RFQ",
+      "sort_order": 49,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YRFM",
+      "label": "Material RFQ",
+      "sort_order": 50,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YRFS",
+      "label": "Service RFQ",
+      "sort_order": 51,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YRTN",
+      "label": "Return PO",
+      "sort_order": 52,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "YSER",
+      "label": "Service PR",
+      "sort_order": 53,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "YSER",
+      "label": "Service PO",
+      "sort_order": 54,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YSLP",
+      "label": "Legal & Professional",
+      "sort_order": 55,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YTMK",
+      "label": "Qty Contract TATA",
+      "sort_order": 56,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "YTWK",
+      "label": "Value Contract TATA",
+      "sort_order": 57,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PR",
+      "code": "YUNB",
+      "label": "PR Non Valuated",
+      "sort_order": 58,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_doc_type",
+      "document_type": "",
+      "applies_to_kind": "PO",
+      "code": "YUNB",
+      "label": "PO Non Valuated",
+      "sort_order": 59,
+      "extra": null
+    },
+    {
+      "domain": "purchasing_org",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1MGH",
+      "label": "1mg Healthcare",
+      "sort_order": 0,
+      "extra": {
+        "default_plant": "H001"
+      }
+    },
+    {
+      "domain": "purchasing_org",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1MGT",
+      "label": "1mg Technologies",
+      "sort_order": 1,
+      "extra": {
+        "default_plant": "T001"
+      }
+    },
+    {
+      "domain": "purchasing_org",
+      "document_type": "",
+      "applies_to_kind": "",
+      "code": "1LFS",
+      "label": "1mg Lifesciences",
+      "sort_order": 2,
+      "extra": {
+        "default_plant": "L001"
+      }
+    }
+  ]
+}

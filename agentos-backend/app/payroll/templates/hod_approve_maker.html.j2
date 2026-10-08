@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #333; max-width: 600px; margin: 0 auto;">
+<div style="background: #e6f4ea; border-radius: 8px; padding: 24px; margin: 16px 0; border-left: 4px solid #137333; border-right: 1px solid #ceead6; border-top: 1px solid #ceead6; border-bottom: 1px solid #ceead6;">
+
+<h2 style="color: #137333; margin-top: 0;">✅ Sheet Approved by HOD</h2>
+
+<p>Dear Maker,</p>
+
+<p>
+Your input sheet for <strong>{{ module }}</strong> ({{ employee_home }}) has been approved by the Head of Department (HOD) and forwarded to Payroll Ops for final processing.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold; width: 40%;">Earning Head</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ module }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Employee Home</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ employee_home }}</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Approved By (HOD)</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6;">{{ hod_name }} ({{ hod_email }})</td></tr>
+  <tr><td style="padding: 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Current Status</td><td style="padding: 8px; border-bottom: 1px solid #dee2e6; color: #137333; font-weight: bold;">Pending Payroll Finalization</td></tr>
+</table>
+
+{% if comments %}
+<div style="margin-top: 20px; background: #ffffff; border: 1px solid #ceead6; border-radius: 6px; padding: 16px;">
+  <h4 style="color: #137333; margin-top: 0; margin-bottom: 8px;">💬 HOD Remarks</h4>
+  <p style="margin: 0; font-style: italic;">"{{ comments }}"</p>
+</div>
+{% endif %}
+
+<p style="margin-top: 24px; color: #666; font-size: 12px;">This is an automated notification from the PIS Workflow System. HRBP and HOD are CC'd on this message.</p>
+
+</div>
+</body>
+</html>
