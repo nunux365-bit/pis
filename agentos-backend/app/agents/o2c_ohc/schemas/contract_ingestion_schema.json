@@ -1,0 +1,509 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agenos-contract-ingestion-v1",
+  "title": "AGENOS Contract Ingestion Schema",
+  "description": "LLM MUST output this JSON when parsing a new contract PDF. This output is used to populate the agenos database. Every field has hints, data types, and required/optional markers. When unsure, set confidence < 0.7 and needs_human_review = true.",
+
+  "type": "object",
+  "required": ["extraction_metadata", "client", "sites", "contract", "parties", "payment_terms", "rate_lines"],
+  "additionalProperties": false,
+
+  "properties": {
+
+    "extraction_metadata": {
+      "type": "object",
+      "description": "REQUIRED. Information about this extraction run itself.",
+      "required": ["source_filename", "page_count", "ingestion_class", "overall_confidence", "needs_human_review"],
+      "properties": {
+        "source_filename": {
+          "type": "string",
+          "description": "REQUIRED. Exact PDF filename as provided. Example: 'Complete_with_Docusign_SOW-2-_1MG_X_Voltbek.pdf'"
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "REQUIRED. Total pages in the PDF."
+        },
+        "ingestion_class": {
+          "type": "string",
+          "enum": ["text_native", "image_primary", "mixed"],
+          "description": "REQUIRED. 'text_native' if PDF has selectable text, 'image_primary' if scanned/photographed, 'mixed' if both."
+        },
+        "overall_confidence": {
+          "type": "number",
+          "minimum": 0, "maximum": 1,
+          "description": "REQUIRED. Your confidence in the entire extraction. 1.0 = fully certain, 0.5 = many guesses. Be honest — low confidence triggers human review."
+        },
+        "needs_human_review": {
+          "type": "boolean",
+          "description": "REQUIRED. Set true if ANY field below was guessed, unclear, or could not be extracted. When in doubt, set true."
+        },
+        "review_notes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "OPTIONAL. List specific fields or sections that need human verification. Example: ['Rate for Nurse-3 unclear on page 7', 'TDS section not explicitly stated']. After merged-fee splits, note PO attribution vs equal split if the table is ambiguous."
+        },
+        "extraction_warnings": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "OPTIONAL. Any issues during extraction. Example: ['Page 12 was blurry', 'Table on page 5 had merged cells']"
+        }
+      }
+    },
+
+    "client": {
+      "type": "object",
+      "description": "REQUIRED. The client (NOT TATA 1MG — the OTHER party). If client already exists in DB, provide slug to match.",
+      "required": ["legal_name", "short_name"],
+      "properties": {
+        "legal_name": {
+          "type": "string",
+          "description": "REQUIRED. Full legal entity name exactly as written in the contract. Example: 'Voltbek Home Appliances Private Limited'. DO NOT abbreviate."
+        },
+        "short_name": {
+          "type": "string",
+          "description": "REQUIRED. Short operational name. Example: 'Voltbek', 'TCS', 'TACO-Gotion'."
+        },
+        "slug": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9_]+$",
+          "description": "OPTIONAL. URL-safe key. If this client already exists in the DB, provide their slug to avoid duplicates. Example: 'voltbek', 'tata_cap'. Set null for new clients."
+        },
+        "gstin": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$",
+          "description": "OPTIONAL. 15-digit GST Identification Number if mentioned in contract."
+        },
+        "pan": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+          "description": "OPTIONAL. 10-char PAN if mentioned in contract."
+        },
+        "registered_address": {
+          "type": ["string", "null"],
+          "description": "OPTIONAL. Full registered address as mentioned in contract."
+        },
+        "city": {"type": ["string", "null"]},
+        "state": {"type": ["string", "null"]}
+      }
+    },
+
+    "sites": {
+      "type": "array",
+      "minItems": 1,
+      "description": "REQUIRED. All service locations mentioned in the contract. At least one site must be provided. Each site is where TATA 1MG deploys staff.",
+      "items": {
+        "type": "object",
+        "required": ["site_key", "canonical_name", "display_name", "service_category"],
+        "properties": {
+          "site_key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$",
+            "description": "REQUIRED. Unique key for this site within this contract. Use pattern: clientslug_city. Example: 'voltbek_sanand', 'gotion_chakan'."
+          },
+          "canonical_name": {
+            "type": "string",
+            "description": "REQUIRED. Full site name as written in the contract. Include company name and full address. Example: 'Voltbek Home Appliances Pvt Ltd, Plot SM-12+51/1/2, GIDC Sanand-II'"
+          },
+          "display_name": {
+            "type": "string",
+            "description": "REQUIRED. Short operational label. Example: 'Voltbek OHC – Sanand', 'Ramboll Medical Room – Hyderabad'"
+          },
+          "address": {
+            "type": ["string", "null"],
+            "description": "OPTIONAL. Full street address from contract."
+          },
+          "city": {"type": ["string", "null"], "description": "REQUIRED if extractable."},
+          "state": {"type": ["string", "null"], "description": "REQUIRED if extractable."},
+          "pincode": {"type": ["string", "null"]},
+          "service_category": {
+            "type": "string",
+            "enum": ["ohc", "medical_room", "visiting_room", "cwp", "other"],
+            "description": "REQUIRED. 'ohc' = Occupational Health Center (factory/plant), 'medical_room' = office medical room, 'visiting_room' = periodic doctor visits, 'cwp' = Corporate Wellness Program."
+          },
+          "attendance_system_codes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source_system", "alias_code"],
+              "properties": {
+                "source_system": {
+                  "type": "string",
+                  "enum": ["truein", "client_hr", "erp", "manual"],
+                  "description": "REQUIRED. Which system uses this code."
+                },
+                "alias_code": {
+                  "type": "string",
+                  "description": "REQUIRED. Exact code as it appears in that system. Example: 'VOLTBEK_SANAND'"
+                },
+                "alias_display": {"type": ["string", "null"]}
+              }
+            },
+            "description": "OPTIONAL. Known attendance system codes that map to this site. These go into the site_alias table."
+          }
+        }
+      }
+    },
+
+    "contract": {
+      "type": "object",
+      "description": "REQUIRED. The contract terms being extracted.",
+      "required": ["title", "contract_kind", "effective_from", "termination_notice_days"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "REQUIRED. Descriptive title. Example: 'Voltbek OHC SOW-2 FY25-28'. Include client name, type, and period."
+        },
+        "contract_kind": {
+          "type": "string",
+          "enum": ["msa", "sow", "service_agreement", "letter_of_extension", "amendment", "cwp_msa"],
+          "description": "REQUIRED. 'msa' = Master Service Agreement (framework, no commercials). 'sow' = Statement of Work (references an MSA, has rate cards). 'service_agreement' = standalone with both terms and rates. 'letter_of_extension' = extends existing agreement. 'amendment' = modifies existing terms. 'cwp_msa' = TACO-style Corporate Wellness Program agreement."
+        },
+        "ref_number": {
+          "type": ["string", "null"],
+          "description": "OPTIONAL. Contract reference number if present. Example: 'TCL/2024/11/1043'"
+        },
+        "docusign_envelope_id": {
+          "type": ["string", "null"],
+          "description": "OPTIONAL. DocuSign envelope ID if contract was signed via DocuSign. Usually a UUID like '7386C17B-F2C4-428B-9B15-53067CFCE70E'"
+        },
+        "effective_from": {
+          "type": "string",
+          "format": "date",
+          "description": "REQUIRED. Start date of the contract. Format: YYYY-MM-DD. Look for 'Effective Date', 'Commencement Date', or 'Start Date' in the contract."
+        },
+        "effective_to": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "OPTIONAL. End date. NULL means open-ended (auto-renewal). Format: YYYY-MM-DD."
+        },
+        "execution_date": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "OPTIONAL. Date contract was actually signed. May differ from effective_from."
+        },
+        "termination_notice_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "REQUIRED. Days of notice required to terminate. Usually 30 or 90. Look for 'termination' or 'notice period' clause."
+        },
+        "non_solicitation_months": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0,
+          "description": "OPTIONAL. Anti-poaching period in months after contract ends. Look for 'non-solicitation' clause. Default 0 if not mentioned."
+        },
+        "supersedes_contract_title": {
+          "type": ["string", "null"],
+          "description": "OPTIONAL. If this is an extension/amendment, provide the title of the contract it supersedes. Used to set superseded_by_id."
+        },
+        "linked_documents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["filename", "doc_role"],
+            "properties": {
+              "filename": {"type": "string", "description": "REQUIRED. Filename of the linked document."},
+              "doc_role": {
+                "type": "string",
+                "enum": ["msa", "primary_sow", "amendment", "rate_exhibit", "extension", "other"],
+                "description": "REQUIRED. Role of this document in the contract."
+              }
+            }
+          },
+          "description": "OPTIONAL. If this SOW references an MSA, or this extension references the original agreement, list them here."
+        }
+      }
+    },
+
+    "parties": {
+      "type": "array",
+      "minItems": 2,
+      "description": "REQUIRED. All legal entities party to this contract. MUST include TATA 1MG as service_provider and at least one client. For multi-entity contracts (TATA Capital has 3 entities, TATA Trust has 5 trusts), list ALL of them.",
+      "items": {
+        "type": "object",
+        "required": ["party_role", "legal_name"],
+        "properties": {
+          "party_role": {
+            "type": "string",
+            "enum": ["service_provider", "primary_client", "co_client", "payer", "guarantor"],
+            "description": "REQUIRED. 'service_provider' = TATA 1MG (always exactly one). 'primary_client' = main client entity. 'co_client' = additional client entities (TATA Trust has 5 trusts as co_clients). 'payer' = if a different entity pays. 'guarantor' = parent guarantee."
+          },
+          "legal_name": {
+            "type": "string",
+            "description": "REQUIRED. Full legal name as written in contract."
+          },
+          "short_name": {"type": ["string", "null"]},
+          "gstin": {"type": ["string", "null"]},
+          "pan": {"type": ["string", "null"]},
+          "signatory_name": {
+            "type": ["string", "null"],
+            "description": "OPTIONAL. Name of person who signed for this party."
+          },
+          "signatory_title": {
+            "type": ["string", "null"],
+            "description": "OPTIONAL. Title/designation of signatory. Example: 'Head HR & Administration', 'Authorized Signatory'"
+          }
+        }
+      }
+    },
+
+    "payment_terms": {
+      "type": "object",
+      "description": "REQUIRED. Payment and tax terms. Source may be prose (IT/OHC agreements) OR a two-column annexure table (common in TACO/CWP MSAs). Read every row of a payment-terms table and map to these fields; use the PDF numbers, not generic defaults (e.g. do not assume 30 days if the table says 45).",
+      "required": ["payment_due_days", "gst_rate", "tds_applicable"],
+      "properties": {
+        "payment_due_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "REQUIRED. Calendar days to pay after the trigger (see payment_due_trigger). From phrases like 'payment within 45 days of receipt of invoice'. Must match the contract — not a generic 30 unless the document says 30."
+        },
+        "payment_due_trigger": {
+          "type": "string",
+          "enum": ["invoice_date", "invoice_receipt", "month_end"],
+          "default": "invoice_receipt",
+          "description": "REQUIRED. Start of the payment clock. invoice_receipt = from receipt of invoice (typical 'from receipt of invoice'); invoice_date = from invoice date; month_end = tied to month-end billing. Infer from the payment-terms table or clause."
+        },
+        "invoice_raise_by_day": {
+          "type": ["integer", "null"],
+          "description": "OPTIONAL. Calendar day-of-month (1–31) only if the contract specifies when invoices must be raised (e.g. 'by 10th of following month'). Null if not stated — do not default to 5."
+        },
+        "invoice_dispute_window_days": {
+          "type": ["integer", "null"],
+          "description": "OPTIONAL. Days the client may dispute an invoice after receipt, if a separate row/clause exists. Distinct from payment_due_days — do not duplicate payment period here unless the contract uses one number for both."
+        },
+        "late_payment_interest_rate": {
+          "type": ["number", "null"],
+          "description": "OPTIONAL. Nominal annual interest % on overdue amounts (e.g. 18.0 for 18% p.a.) when the table or clause specifies penal/late interest. Null if silent."
+        },
+        "gst_rate": {
+          "type": "number",
+          "description": "REQUIRED. GST % from the contract (table row or clause); commonly 18.0 for Indian healthcare services."
+        },
+        "tds_applicable": {
+          "type": "boolean",
+          "description": "REQUIRED. True if TDS applies per contract. If the table row says TDS as per IT Act but no subsection, set true and use review_notes; map 194J/194C explicitly when named."
+        },
+        "tds_section": {
+          "anyOf": [
+            { "type": "null" },
+            { "type": "string", "enum": ["194J", "194C", "194JB"] }
+          ],
+          "description": "194J = professional/technical (often 10%); 194C = contractor (often 2%). Null only when TDS is mentioned generically without section or tds_applicable is false."
+        },
+        "tds_rate": {
+          "type": ["number", "null"],
+          "description": "Percentage withheld: typically 10.0 for 194J, 2.0 for 194C when the contract states the rate. Null if section unknown."
+        },
+        "annual_increment_clause": {
+          "type": "boolean",
+          "default": false,
+          "description": "True only if annual fee revision / escalation is explicitly stated in commercial or payment sections; false otherwise."
+        }
+      }
+    },
+
+    "rate_lines": {
+      "type": "array",
+      "minItems": 1,
+      "description": "REQUIRED. ALL billable line items from the rate card / commercial schedule. This is the MOST IMPORTANT section — these rows become `contract_rate_line` records and drive MIS summaries and invoices: `contracted_quantity` caps how many employees can bill per line; `rate_amount` and `billing_model` set contractual amounts; `billing_rules` and `billing_rule_text` are read by the MIS LLM. Extract EVERY role, rate, and rule. For merged-cell tables (typical TACO / multi-site Schedule B), **K** = vertical span of the **fee cell for that role** (count **Col B** site rows in that span); emit **K** rate_lines—**one per spanned location row**. **FMO (merged Col D):** headline ÷ **K** on each of the **K** lines (paise-safe) even if cell text names a PO or location — unless the PDF explicitly allocates FMO to one site only. **Regional blocks** (e.g. Chakan–Ranjangaon vs Sanand) each have their **own** Col D merges and **K**; **Sanand:** if **Gotion – Sanand** shares the same Col D merge as **IPD – Sanand** and **TTR – Sanand**, **K = 3** and three FMO lines — do **not** use **K = 2** unless the PDF visually ends the Col D merge before Gotion’s row. **MO (merged Col F):** default same ÷ **K**; **unless** the prompt's **Exception A** applies (fee **label** exact-match to **one** Col B site in the span **and** Col E does **not** force shared MO) → full headline on that site only, 0 on others. **Every** spanned row gets FMO/MO lines per those rules even when nurse column is 0, '-', or NA. **Exclude** HELD IN ABEYANCE. **Sum** of split lines must equal headline INR per merge. **Do not** use ÷K for IT-style **per-site headcount tier** annexures. If rules are described in prose across multiple pages, combine them into one rule per role.",
+      "items": {
+        "type": "object",
+        "required": ["site_key", "billing_model", "role_code", "description", "attendance_required", "schedule_type", "billing_rules", "billing_rule_text"],
+        "properties": {
+          "site_key": {
+            "type": ["string", "null"],
+            "description": "REQUIRED. Reference to site_key from the sites array above. NULL if this rate applies to ALL sites (e.g., medicines for all TCS locations)."
+          },
+          "billing_model": {
+            "type": "string",
+            "enum": ["fixed_monthly", "rate_attendance", "per_visit", "per_head", "as_per_actuals", "milestone", "retainer_variable"],
+            "description": "REQUIRED. How this line item is billed. 'rate_attendance' = monthly rate deducted for absence (most common for manpower). 'fixed_monthly' = flat fee regardless of attendance (ambulance). 'per_visit' = per completed visit (visiting doctor). 'per_head' = per enrolled employee (health package). 'as_per_actuals' = cost pass-through (medicines, equipment)."
+          },
+          "role_code": {
+            "type": "string",
+            "pattern": "^[A-Z0-9_]+$",
+            "description": "REQUIRED. Uppercase code for the role/item. Use standard patterns: 'MO_MBBS' (Medical Officer), 'NURSE_GNM' (Nurse), 'FMO_MBBS_AFIH' (Factory Medical Officer), 'BLS_AMBULANCE', 'MEDICINES', 'EQUIP_CALIB'. If shift nurses, use 'NURSE_GNM_SHIFT'."
+          },
+          "description": {
+            "type": "string",
+            "description": "REQUIRED. Human-readable description for invoice line. Example: 'Medical Officer (MBBS/AFIH)', 'Shift Nurses (GNM) – Chakan'"
+          },
+          "rate_amount": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "description": "REQUIRED for fixed_monthly, rate_attendance, per_visit, per_head. NULL for as_per_actuals. **Per-unit** monthly/visit rate in INR from the contract (no thousands separators in JSON). If the PDF gives **one total for N identical posts** without 'each' or 'per person', divide that total by N and set contracted_quantity = N. **TACO Schedule B merged FMO (Col D):** use **rate_amount = headline ÷ K** on each of **K** Col B rows in the merge (paise-safe), regardless of PO/location wording in the cell, unless the PDF explicitly restricts FMO to one site. **Sanand / multi-row bands:** **K** includes **every** Col B site row inside **that** Col D span (e.g. Gotion with IPD+TTR when one merged cell covers all three). **TACO merged MO (Col F):** default **headline ÷ K**; Exception A = full headline on one site only when contract-extract prompt conditions (exact label match + no Col E shared-MO override) are met."
+          },
+          "rate_unit": {
+            "type": ["string", "null"],
+            "enum": ["month", "day", "hour", "visit", "head", "shift", null],
+            "description": "REQUIRED when rate_amount is set. 'month' for monthly rates, 'visit' for per-visit, 'head' for per-employee."
+          },
+          "contracted_quantity": {
+            "type": ["number", "null"],
+            "description": "OPTIONAL. Headcount or unit count for this line (e.g. 3 nurses, 1 MO). Used as the **MIS billing cap** for employee-matched lines. For a **bundle total** split across N posts, set this to N and rate_amount = total/N. NULL for per_visit and variable per_head when not fixed."
+          },
+          "attendance_required": {
+            "type": "boolean",
+            "description": "REQUIRED. true only for human OHC roster lines: role_code prefixes MO_, FMO_, SR_MO_, JR_MO_, COMPANY_MO_, NURSE_, PARAMEDIC_ or exact DOCTOR/PHYSICIAN/VISITING_MEDICAL_OFFICER (including per_visit physicians on the roll). false for fixed_monthly, as_per_actuals, per_head, milestone, retainer_variable when not roster staffing. Never true if role_code suggests vehicle/supplies: contains AMBULANCE, BMW, MEDICINES, EQUIP, HEALTH_PACKAGE, DRIVER, DISPOSAL, or WASTE."
+          },
+          "minimum_units_per_period": {
+            "type": ["number", "null"],
+            "description": "OPTIONAL. Minimum billing floor even if attendance is lower. Example: 'minimum 20 days billing even if 15 days present'."
+          },
+          "unfilled_penalty_pct": {
+            "type": "number",
+            "default": 0,
+            "description": "OPTIONAL. Penalty percentage for unfilled contracted positions. Example: 50.0 means penalty of 50% of rate for each unfilled slot."
+          },
+          "ot_multiplier": {
+            "type": ["number", "null"],
+            "description": "OPTIONAL. Overtime rate multiplier. Example: 1.5 means 1.5x for OT hours. NULL if OT not applicable."
+          },
+          "service_charge_type": {
+            "type": "string",
+            "enum": ["fixed", "percentage", "none"],
+            "default": "none",
+            "description": "REQUIRED. 'fixed' = flat amount added (Voltbek MO: Rs 5,000). 'percentage' = % uplift on **this** line's base (e.g. per-line admin). 'none' = no per-line service charge. Invoice-level admin (% of monthly invoice) belongs on a separate line: `fixed_monthly` + `role_code` OHC_ADMIN_INVOICE_PCT + `billing_rules.invoice_admin_pct` — not repeated on each `rate_attendance` row."
+          },
+          "service_charge_value": {
+            "type": ["number", "null"],
+            "description": "REQUIRED when service_charge_type != 'none'. The value: 5000 for fixed, 11 for 11%."
+          },
+          "actuals_markup_pct": {
+            "type": ["number", "null"],
+            "description": "REQUIRED for as_per_actuals. Markup percentage on cost. 0 = at cost, 5 = cost + 5%. NULL for non-actuals."
+          },
+          "schedule_type": {
+            "type": "string",
+            "enum": ["prescribed", "frequency", "shift_based", "continuous", "on_demand", "none"],
+            "description": "REQUIRED. How the schedule works. 'prescribed' = fixed days/times (TATA Trust: Tue/Fri). 'frequency' = X visits per period, specific days flexible (Ramboll: 2/month). 'shift_based' = rotating shifts (TACO nurses). 'continuous' = 24x7 (ambulance). 'on_demand' = as needed (medicines). 'none' = not applicable."
+          },
+          "schedule_config": {
+            "type": "object",
+            "description": "REQUIRED. Schedule details matching schedule_type. See examples below.",
+            "examples": [
+              {"_type": "prescribed", "slots": [{"day_of_week": 2, "start": "10:00", "end": "13:00", "hours": 3}]},
+              {"_type": "frequency", "visits_per_month": 2, "hours_per_visit": 4, "days_flexible": true},
+              {"_type": "shift_based", "shifts": [{"name": "morning", "start": "06:00", "end": "14:00"}], "days_per_week": 6},
+              {"_type": "rate_attendance", "days_per_week": 6, "hours_per_day": 8},
+              {"_type": "continuous_or_on_demand_or_none"}
+            ]
+          },
+          "billing_rules": {
+            "type": "object",
+            "description": "REQUIRED. Structured rules that the billing engine code executes. This is the MOST CRITICAL field. The billing engine reads this JSON to compute invoices deterministically. Must match the billing_model.",
+            "properties": {
+              "deduction": {
+                "type": ["object", "null"],
+                "description": "REQUIRED. Deduction rule for absences. NULL for fixed_monthly. For rate_attendance, this defines how absences reduce the bill.",
+                "properties": {
+                  "method": {
+                    "type": "string",
+                    "enum": ["pro_rata_working_days", "pro_rata_calendar_days", "pro_rata_scheduled_sessions", "per_shift_missed", "none"],
+                    "description": "REQUIRED. 'pro_rata_working_days' = deduct absent days against the monthly fee using **per-person** LOP-style proration (most common for desk/monthly OHC staffing). **MIS Summary (MAP-STAFF-CAL fingerprint):** the divisor **T** for `rate_amount × max(0,T−absent)÷T` is **calendar days in the billing period** from system Context — **not** Mon–Fri `working_days`, even though this enum value contains the word `working_days`. That string is an **ingest fingerprint**, not the MIS calendar-month divisor. 'pro_rata_scheduled_sessions' = prescribed visit/session schedules. 'per_shift_missed' = shift-based."
+                  },
+                  "formula": {
+                    "type": "string",
+                    "description": "REQUIRED. Human-readable formula for reviewers. Example: 'monthly rate prorated for absence'. **Do not** phrase as the only source of truth for MIS divisor T when the line is monthly MAP-STAFF-CAL — MIS uses **calendar_days** from the billing period Context for T."
+                  },
+                  "scope": {
+                    "type": "string",
+                    "enum": ["per_person", "aggregate", "per_shift"],
+                    "description": "REQUIRED. 'per_person' = each seat tracked separately for attendance/MIS (typical: multiple nurses/MOs). 'aggregate' = one lump for the group with a single pool. 'per_shift' = shift-based staffing. Prefer per_person for multi-head monthly manpower unless the contract clearly bills one amount for the group as a whole."
+                  },
+                  "applies_to": {
+                    "type": "array",
+                    "items": {"type": "string", "enum": ["base", "service_charge"]},
+                    "description": "REQUIRED. What gets deducted. ['base'] = only base rate. ['base', 'service_charge'] = both base and service charge proportionally."
+                  }
+                }
+              },
+              "pro_rata": {
+                "type": ["object", "null"],
+                "description": "OPTIONAL. How to handle partial months (contract starts/ends mid-month).",
+                "properties": {
+                  "method": {
+                    "type": "string",
+                    "enum": ["working_days", "calendar_days", "scheduled_sessions"],
+                    "description": "REQUIRED. For **rate_attendance** monthly staffing with `deduction.method = pro_rata_working_days`, use **working_days** here as the standard **fingerprint** (ingest convention). **MIS billing** still uses **calendar_days** from Context as divisor **T** for that fingerprint (India MAP-STAFF-CAL). Use **calendar_days** here when the contract truly bills on calendar partial months in a non-MAP way. **scheduled_sessions** for visit/session lines."
+                  },
+                  "partial_month": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "REQUIRED. Whether partial month billing is allowed."
+                  }
+                }
+              },
+              "count_method": {
+                "type": ["string", "null"],
+                "enum": ["attendance_log", "client_confirmed", null],
+                "description": "REQUIRED for per_visit and per_head. How to count billable units."
+              },
+              "count_source": {
+                "type": ["string", "null"],
+                "enum": ["attendance_row", "package_usage_period", null],
+                "description": "REQUIRED for per_visit and per_head. Which table provides the count."
+              },
+              "count_deadline_day": {
+                "type": ["integer", "null"],
+                "description": "OPTIONAL for per_head. Day of month by which client must confirm headcount."
+              },
+              "cancelled_visits": {
+                "type": ["string", "null"],
+                "enum": ["no_charge", "half_charge", "full_charge", null],
+                "description": "OPTIONAL for per_visit. What happens when a scheduled visit is cancelled."
+              },
+              "input_method": {
+                "type": ["string", "null"],
+                "enum": ["usage_event", "manual_entry", null],
+                "description": "REQUIRED for as_per_actuals. How actual costs are recorded."
+              },
+              "markup_pct": {
+                "type": ["number", "null"],
+                "description": "OPTIONAL for as_per_actuals. Markup on cost. 0 = at cost, 5 = +5%."
+              },
+              "proof_required": {
+                "type": ["array", "null"],
+                "items": {"type": "string"},
+                "description": "OPTIONAL for as_per_actuals. What proof documents must be attached. Example: ['purchase_order', 'delivery_note']"
+              },
+              "approval_required": {
+                "type": ["boolean", "null"],
+                "description": "OPTIONAL for as_per_actuals. Whether manual approval is needed before billing."
+              },
+              "includes": {
+                "type": ["array", "null"],
+                "items": {"type": "string"},
+                "description": "OPTIONAL for per_head packages. What the package includes."
+              },
+              "invoice_admin_pct": {
+                "type": ["number", "null"],
+                "description": "OPTIONAL. On the dedicated invoice-level admin line only (`role_code` OHC_ADMIN_INVOICE_PCT, `fixed_monthly`): percentage applied to the **sum of staffing (rate_attendance) bases** for the site/period before GST — i.e. contract wording 'admin % on monthly invoice' mapped to one rate_line. Do **not** duplicate this on each staffing row."
+              }
+            }
+          },
+          "billing_rule_text": {
+            "type": "string",
+            "description": "REQUIRED. Plain English description of the billing rule. Be specific with amounts and formulas. This is stored for audit and human reference. Example: 'Bill Rs 1,35,000/month for 1 Medical Officer. Add Rs 5,000 fixed service charge per month. Deduct Rs(1,35,000 / working_days) x absent_days.'"
+          },
+          "source_ref": {
+            "type": "object",
+            "description": "OPTIONAL. Where in the contract this rate was found.",
+            "properties": {
+              "page": {"type": ["integer", "null"]},
+              "exhibit": {"type": ["string", "null"]},
+              "clause": {"type": ["string", "null"]},
+              "table_row": {"type": ["integer", "null"]}
+            }
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0, "maximum": 1,
+            "description": "OPTIONAL. Your confidence in this specific rate line extraction. Rates from clear tables = 0.95+. Rates inferred from prose = 0.6-0.8."
+          }
+        }
+      }
+    }
+  }
+}

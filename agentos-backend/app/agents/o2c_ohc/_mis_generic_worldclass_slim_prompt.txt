@@ -1,0 +1,312 @@
+# GENERIC MIS BILLING ENGINE
+
+temperature = 0  
+Same input → EXACT same output  
+Emit **one** MIS Summary JSON object matching **{schema_json}** (full schema — not `summary_rows` only).
+
+**Server placeholders:** This file is designed for Python `str.format` with the same keyword arguments as `build_mis_generic_worldclass_user_prompt`: `prompt_bundle_version`, `schema_json`, `client_site_key`, `period_start`, `period_end`, `working_days`, `calendar_days`, `attendance_json`, `rate_lines_json`.
+
+**Bundle id (logs / mis_summary):** {prompt_bundle_version}
+
+--------------------------------------------------
+§1 CONTEXT (aligned with server injection)
+
+**Scalars (Context block at end of this message):**
+
+- **T_cal** = **`calendar_days`** from Context = **{calendar_days}** (primary calendar span for the billing period; MAP-STAFF-CAL **T** where the contract/bundle fixes calendar **T**).
+- **T_work** = **`working_days`** from Context = **{working_days}** (Mon–Fri-style count; use only when the active line class / contract explicitly requires **working_days** as divisor **T** — **not** MAP-STAFF-CAL **T** unless the bundle’s low-frequency MAP rule applies).
+
+**Structured inputs (JSON blocks at end):**
+
+- **rate_lines** → entire array/object payload under **“rate_lines JSON”** below (`{rate_lines_json}` after format). Per-row fields include `billing_model`, `billing_rules`, `billing_rule_text`, `description`, `rate_amount`, `rate_unit`, `schedule_config`, `contracted_quantity`, `service_charge_*`, etc.
+- **attendance_records** → payload under **“attendance_records JSON”** below (`{attendance_json}` after format).
+
+**Not injected as separate top-level JSON today:** `contract_terms` — treat contract prose as carried by **`rate_lines`** (`description`, `billing_rule_text`, `billing_rules`).
+
+**Site / period (Context):**
+
+- **client_site_key** = **{client_site_key}**
+- **billing_period_start** = **{period_start}**
+- **billing_period_end** = **{period_end}**
+
+**actuals_available:** Use contract + `rate_lines` / payload; Context may state a default. Current server template line: **actuals_available: false** (to thread a dynamic flag later, add a matching placeholder to this file **and** pass the keyword in `str.format`.)
+
+--------------------------------------------------
+§2 ATTENDANCE
+
+**`attendance_records`** is authoritative per person: copy **`present_days`** / **`absent_days`** / **`leave_days`** onto staffing **`summary_rows`** for the same **`employee_external_id`**. **`absent_days`** = explicit absence only — **never** substitute **`week_off_days`**, **`blank_days`**, **`(calendar_days − present_days)`**, or grid guesses; §5 **`absent_days`** in formulas = those copied values in **`calc_notes`**.
+
+`paid_days` = `present_days` + `leave_days` when provided.
+
+**clinical_role_hint:** Each attendance row may carry a roster string or `null`. If **multiple** `rate_lines` **share the same** `role_code` **as** that row and routing would otherwise **tie** between those lines only, use `clinical_role_hint` to break that tie. Do **not** use it to change `role_code`, attendance days, divisors, or amounts.
+
+--------------------------------------------------
+§3 ROUTING (ONE EMPLOYEE → ONE ROW)
+
+Assign each employee to EXACTLY one rate_line:
+
+Order:
+1. exact role_code match  
+2. prefix match  
+3. explicit mapping  
+4. fallback → lowest contract_rate_line_id  
+
+Losers:
+is_omitted = true  
+final_amount = 0  
+
+**Attendance-based rate lines** (`billing_model` = `rate_attendance`, or `per_visit` with `attendance_required` ≠ false): a row with **`is_omitted=false`** must use a real **`employee_external_id`** from **`attendance_records`**. Server will set **`is_omitted=true`** and **`final_amount=0`** if there is no roll id (see MIS self-correction if flagged).
+
+--------------------------------------------------
+§4 CLASSIFICATION (FIRST MATCH WINS — LOCKED)
+
+Order is STRICT. Stop at first match.
+
+1. C_FIXED  
+   IF billing_model == fixed_monthly  
+
+2. C_AS_PER_ACTUALS  
+   IF billing_model == as_per_actuals  
+
+3. C_SHIFT_MISS  
+   IF billing_rules.deduction.method == per_shift_missed  
+
+4. C_MONTHLY_RETAINER  (HIGHEST PRIORITY VISIT OVERRIDE)  
+   IF billing_model == per_visit AND (
+        rate_unit == month
+        OR billing_rule_text contains "per month" OR "monthly"
+   )
+
+   IMPORTANT:
+   - Overrides ALL visit logic
+   - No visit math allowed
+
+5. C_VISIT_TRUE  
+   IF billing_model == per_visit AND rate_unit == visit  
+
+6. C_HIGH_FREQUENCY_MONTHLY
+
+   IF (
+        billing_model == per_visit
+        OR billing_model == rate_attendance
+      )
+      AND NOT already classified as C_MONTHLY_RETAINER
+      AND (
+            visits_per_month >= 15
+         OR visits_per_week >= 5
+         OR expected_days >= 20
+      )
+
+   → CLASS = C_MAP_STAFF_CAL
+
+   RULES:
+   - Uses **T_cal** (calendar_days) — calendar-based proration; **not** **T_work** for this class.
+   - DOES NOT depend on text interpretation
+   - MUST be evaluated BEFORE **C_WORKING_DAY** and BEFORE VISIT_BUNDLED
+
+7. C_WORKING_DAY  
+   IF billing_model == rate_attendance AND
+      billing_rules.pro_rata.method == working_days  
+   (**Low-frequency** `rate_attendance` only: step **6** did **not** match — otherwise MAP / calendar **T** from step **6** wins per §1.)
+
+8. C_VISIT_BUNDLED  
+
+   IF billing_model == rate_attendance AND (
+        visits_per_month > 0
+        OR visits_per_week > 0
+   )
+
+9. C_MAP_STAFF_CAL  
+
+   IF billing_model == rate_attendance  
+
+10. C_TIME  
+   fallback  
+
+--------------------------------------------------
+§5 FORMULAS (ONE CLASS → ONE FORMULA ONLY)
+
+--------------------
+C_FIXED
+
+Z = rate_amount  
+
+--------------------
+C_AS_PER_ACTUALS
+
+IF actuals_available:
+    Z = actual_value  
+ELSE:
+    IF minimum_amount exists:
+        Z = minimum_amount  
+    ELSE IF cap_amount exists:
+        Z = cap_amount  
+    ELSE:
+        Z = 0  
+
+--------------------
+C_SHIFT_MISS
+
+IF scheduled_shifts exists:
+    Z = rate_amount × (scheduled − missed) / scheduled  
+ELSE:
+    Z = rate_amount × (T_cal − absent_days) / T_cal  
+
+--------------------
+C_WORKING_DAY
+
+Z = rate_amount × (T_work − absent_days) / T_work  
+
+--------------------
+C_MAP_STAFF_CAL
+
+Z = rate_amount × (T_cal − absent_days) / T_cal  
+
+--------------------
+C_VISIT_TRUE
+
+Z = rate_amount × present_days  
+
+--------------------
+C_VISIT_BUNDLED
+
+IF visits_per_month exists:
+    V_raw = visits_per_month  
+ELSE IF visits_per_week exists:
+    V_raw = visits_per_week × (T_cal / 7)  
+ELSE:
+    V_raw = null  
+
+IF V_raw == null OR V_raw <= 0:
+    Z = 0  
+ELSE:
+    V = ceil(V_raw)  
+    billed_units = min(present_days, V)  
+
+    IF rate_unit == visit:
+        unit_fee = rate_amount  
+    ELSE:
+        unit_fee = rate_amount / V  
+
+    Z = unit_fee × billed_units  
+
+--------------------
+C_MONTHLY_RETAINER
+
+Z = rate_amount  
+
+FORBIDDEN:
+- rate_amount × present_days  
+- rate_amount / V  
+- any visit-based math  
+
+--------------------
+C_TIME
+
+IF billing_rules.calendar_override == true:
+    T = T_cal  
+ELSE:
+    T = T_work  
+
+Z = rate_amount × (T − absent_days) / T  
+
+--------------------------------------------------
+§6 SERVICE CHARGE
+
+base = Z  
+
+IF percentage:
+    SC = base × %  
+ELSE IF fixed:
+    - **Default:** SC = full **fixed_value** — no absence factor; **manpower-only** wording (“absent days”, “working days in the month” for **staff**) does **not** prorate SC by itself.
+    - **Narrow exception — proportional fixed SC:** SC = **fixed_value × f** **only** when **`billing_rules` / `billing_rule_text` / `description`** (or **`billing_rules.deduction.applies_to`** including **`service_charge`**) **explicitly** ties the **service charge** to **pro-rata**, **proportional deduction**, or **same ratio as** base / attendance / LOP.
+      - **Lock one f:** **f** = **max(0, T_row − absent_days) ÷ T_row** where **T_row** is the **same divisor T** already used in §5 for that row’s **base** (same **absent_days** as §2). **Forbidden:** recomputing SC with a **different T** (e.g. **T_work** numerator/denominator for SC while **base** used **T_cal**).
+      - **C_MAP_STAFF_CAL:** **T_row = T_cal** always for **f**; **never** **(T_work − absent_days) ÷ T_work** for SC on the same row.
+ELSE:
+    SC = 0  
+
+Z = base + SC  
+
+--------------------------------------------------
+§7 MINIMUM GUARANTEE
+
+IF minimum_amount exists:
+    Z = max(Z, minimum_amount)  
+
+--------------------------------------------------
+§8 HEADCOUNT CAP
+
+For each rate_line:
+
+Rank:
+1. paid_days DESC  
+2. Z DESC  
+3. employee_external_id ASC  
+
+Top N → billed  
+Rest → omitted (Z = 0)  
+
+--------------------------------------------------
+§9 ADMIN LINE
+
+IF invoice_admin_pct exists:
+
+sum_B = sum(all billed staffing rows)  
+
+Z = sum_B × pct / 100  
+
+--------------------------------------------------
+§10 OUTPUT RULES
+
+- **Canonical row total:** `final_amount` = **Z** from §5–§9 for that row (full precision in JSON; server may quantize to currency decimals after parse).
+- **Single numeric spine (TCS-aligned):** `calc_notes` must show **one** coherent derivation for the row’s **Z** — same inputs, same intermediates, same closing total. **Forbidden:** two incompatible totals (e.g. hand arithmetic **= 105000** then a second “corrected / Pass 3 / tool” **= 110187.50**) **without** deleting the wrong chain. If you revise, **rewrite** `calc_notes` so only **one** closing total remains.
+- **Tools = transcript = JSON:** If you call **`mis_calculator`** or **`mis_macro_*`**, every tool **`value`** that feeds the row’s **Z** must appear **verbatim** in `calc_notes` for that step and must equal the same number used in JSON **`final_amount`** (no alternate “canonical” figure that disagrees with the tool chain you cite).
+- **One terminal clause per billed row:** exactly **one** closing `final_amount=<P>` (or one closing invoice line `= <P>`) on that row’s `calc_notes`; **`<P>`** must be numerically identical to JSON **`final_amount`**.
+- **calc_notes_amount:** mirror **only** that terminal **`<P>`** (same as G4).
+- **No chain-of-thought:** do not dump multi-pass self-audit or validator narration in `calc_notes` — locked intermediates + SC + **one** total only.
+- **Rate-line coverage:** each payload **`contract_rate_line_id`** appears in **≥1** `summary_rows` row (**`is_omitted=true`** still counts); **>1** row **same** id is allowed when several **`employee_external_id`** bill that line (`contracted_quantity` / §8). Only **`is_omitted=false`** rows count for G1 and **totals**.
+- No duplicate billed employees  
+- totals MUST match  
+
+--------------------------------------------------
+§11 VALIDATION
+
+G1: One employee → one billed row  
+G2: Every payload `contract_rate_line_id` in ≥1 row (omitted ok; multi-row same id ok); staffed **`present_days`/`absent_days`** match **`attendance_records`** (§2)  
+G3: totals match  
+G4: calc_notes_amount == final_amount  
+G5: No visit math in C_MONTHLY_RETAINER  
+G6: No multi-class execution  
+G7: No contradictory second spine — tool literals (if any) and the **terminal** `calc_notes` total match JSON **final_amount**  
+G8: §4–§9 are the only authority for class + **Z**; do not override with a second invented spine in notes  
+G9: **C_MAP_STAFF_CAL** + §6 fixed-SC proportional exception → **f** for SC equals **max(0, T_cal − absent_days) ÷ T_cal** (same **f** as base), not **(T_work − absent_days) ÷ T_work**  
+
+--------------------------------------------------
+END (engine body — Context and JSON follow)
+
+--------------------------------------------------
+**Profile-specific rules (``billing_profile=generic`` — MAP vs working-day proration):**
+- **High-frequency** `rate_attendance` / `per_visit` lines: §4 step **6** **C_HIGH_FREQUENCY_MONTHLY** → **C_MAP_STAFF_CAL** with **T_cal** = Context **calendar_days** (never **T_work** for that class). `calc_notes` must include **India calendar-day manpower override** and **T=calendar_days (N)** for those rows; **`absent_days`** in the fraction = §2 copy from **`attendance_records`**. If §6 prorates **fixed** SC under the narrow proportional exception, use the **same** **f** = **(T_cal − absent_days) ÷ T_cal** as **base** (G9).
+- **C_WORKING_DAY** (§4 step **7**): only when step **6** did **not** match — low-frequency `rate_attendance` with `billing_rules.pro_rata.method == working_days`.
+- **Ingest-template subordination:** If a `per_visit` + month headline could match both monthly retainer and visit-session spines, **C_MONTHLY_RETAINER** (§4 step **4**) wins first (**Narrow carve-out** per §4 strict order).
+
+## Execution mode
+
+Temperature **0**; §4 **first match wins**; one §5 formula class per row; **§10** single-spine + tool-lock applies; emit JSON matching the schema block below.
+
+## Schema (example types — authoritative shape)
+{schema_json}
+
+## Context
+- client_site_key: {client_site_key}
+- billing_period_start: {period_start}
+- billing_period_end: {period_end}
+- working_days: {working_days}
+- calendar_days: {calendar_days}
+- actuals_available: false
+
+## attendance_records JSON
+{attendance_json}
+
+## rate_lines JSON
+{rate_lines_json}
